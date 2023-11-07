@@ -1,5 +1,7 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .outer-box {
@@ -13,8 +15,8 @@
   box-shadow: 1px 2px #cfd3d6;
 }
 
-.images-profile{
-  background-color: #FFFF;
+.images-profile {
+  background-color: #ffff;
   border: 1px solid #e4dfdf;
   position: absolute;
   right: 20%;
@@ -22,7 +24,7 @@
   border-radius: 15px;
 }
 
-.img{
+.img {
   width: 300px;
   max-width: 100%;
   height: auto;
@@ -33,28 +35,84 @@
   display: flex;
   flex-direction: column;
   width: 50%;
+  padding-top: 10px;
   text-align: justify;
 }
 
-.contact{
-  display: flex; 
+.contact {
+  display: flex;
   height: 50px;
-  /* margin: 20px 10px;  */
+  padding-top: 20px;
   gap: 20px;
   align-items: center;
 }
 
-
-.btn-contact{
+.btn-contact {
   border-radius: 20px;
   width: 80px;
   height: 30px;
+  color: white;
   background-color: #111727;
-  color: #ffff;
 }
 
-.download-cv{
+.btn-contact a {
+  color: white;
+  text-decoration: none;
+}
+
+.download-cv {
   align-items: center;
   text-align: center;
   justify-items: center;
+}
+
+.navbar {
+  background-color: #f4f3f3;
+  height: 75px;
+}
+
+.div-navbar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.navbar-link {
+  font-size: 20px;
+}
+
+.navbar-link a {
+  color: black;
+  text-decoration: none;
+}
+
+.navbar-link a:hover {
+  color: rgb(12, 70, 52);
+}
+
+.icon{
+  display: flex; 
+  width: 30%; 
+  text-align: center; 
+  padding-top: 40px; 
+  margin-left: 0px; 
+  gap: 2px
+}
+
+.contact-nav{
+  position: absolute;
+  right: 60px;
+  top: 20px;
+  border-radius: 8px;
+  width: 100px;
+  height: 40px;
+  color: white;
+  background-color: #111727;
+}
+
+.contact-nav a{
+  color: white;
+  text-decoration: none;
 }
