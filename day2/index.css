@@ -1,0 +1,21 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.outer-box {
+  background-color: #fafafa;
+  border: 1px solid #fafafa;
+  width: 1000px;
+  height: 500px;
+  margin: 90px auto;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 1px 2px #cfd3d6;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: justify;
+}
