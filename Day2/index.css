@@ -5,25 +5,28 @@
 .outer-box {
   background-color: #fafafa;
   border: 1px solid #fafafa;
-  width: 900px;
+  width: 800px;
   height: 400px;
-  margin: 70px;
+  margin: 90px auto;
   padding: 40px;
   border-radius: 15px;
   box-shadow: 1px 2px #cfd3d6;
 }
 
 .images-profile{
-  background-color: #f8f5f5;
-  border: 1px solid #f8f5f5;
+  background-color: #FFFF;
+  border: 1px solid #e4dfdf;
   position: absolute;
-  right: 22%;
+  right: 20%;
   padding: 10px;
   border-radius: 15px;
 }
 
 .img{
   width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .main-text {
