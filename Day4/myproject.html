@@ -3,7 +3,7 @@
     <title>My Project</title>
     <link rel="stylesheet" href="css/myproject.css" />
   </head>
-  <body style="background-color: #e1e5e9">
+  <body>
     <!-- Navbar -->
     <nav class="navbar">
       <div class="div-navbar">
@@ -28,7 +28,7 @@
     <!-- End of Navbar -->
 
     <!-- Form -->
-    <div class="form-project">
+    <div class="form-project" style="background-color: #e1e5e9">
       <div class="form-container">
         <form>
           <h1 class="judul">Add My Project</h1>
@@ -37,36 +37,64 @@
             <label for="nameproj">Project Name</label>
             <input type="text" id="inputNameProj" class="projectInput" />
             <label for="name">Start Date</label>
-            <input type="text" id="inputstartdate" class="Startdate"/>
-            <label for="name" style="position: relative; bottom: 90px; left: 187px;">End Date</label>
-            <input type="text" id="inputenddate" class="Enddate"/>
-            <label for="name" style="position: relative; right: 260px; bottom: 5px;">Description</label>
+            <input type="text" id="inputstartdate" class="Startdate" />
+            <label for="name" style="position: relative; bottom: 90px; left: 187px">End Date</label>
+            <input type="text" id="inputenddate" class="Enddate" />
+            <label for="name" style="position: relative; right: 260px; bottom: 5px">Description</label>
             <textarea id="inputdescription" class="description"></textarea>
           </div>
+          <label style="position: relative; bottom: 30px">Technologies</label>
+          <div>
+            <input type="checkbox" id="checkboxNode" class="nodejs" />
+            <label for="nodejs" class="nodejs">Node JS</label>
+            <input type="checkbox" id="checkboxReact" class="reactjs" />
+            <label for="reactjs" class="reactjs">React JS</label>
+            <input type="checkbox" id="checkboxNext" class="nextjs" />
+            <label for="nextjs" class="nextjs">Next JS</label>
+            <input type="checkbox" id="checkboxType" class="typescript" />
+            <label for="typescript" class="typescript">Typescript</label>
+          </div>
+          <div>
+            <label>Upload Image</label>
+            <div class="input-form-image">
+              <input type="file" id="inputImage" hidden />
+              <label for="inputImage">
+                <p class="empty">&nbsp</p>
+                <p class="choose">Choose</p>
+                <img src="assets/icon/file.png" alt="file" />
+              </label>
+            </div>
+          </div>
         </form>
-        <label>Technologies</label>
-        <div>
-          <input type="checkbox" id="checkboxNode" />
-          <label for="nodejs">Node JS</label>
-          <input type="checkbox" id="checkboxReact" />
-          <label for="nodejs">React JS</label>
-          <input type="checkbox" id="checkboxNext" />
-          <label for="nodejs">Next JS</label>
-          <input type="checkbox" id="checkboxType" />
-          <label for="nodejs">Typescript</label>
+      </div>
+    </div>
+    <!-- End Of Form -->
+
+    <!-- List of Project -->
+    <div id="contents" class="myprojectlist">
+      <h1 class="judul">My Project</h1>
+      <div class="project-items">
+        <div class="images">
+          <img src="assets/image/iqbal.jpg" />
+        </div>
+        <div class="sub-title">
+          <p>Dumbways Mobile App - 2021</p>
+        </div>
+        <div class="duration">
+          <p>durasi: 3 bulan</p>
+        </div>
+        <div class="descriptions">
+          <p>App that used for dumbways student, it was deployed and can downloaded on playstore. Happy Download</p>
         </div>
         <div>
-          <label>Upload Image</label>
-          <div class="input-form-image">
-            <label for="inputImage">
-              <img src="assets/icon/file.png" alt="file" />
-            </label>
-            <input type="file" id="inputImage" hidden />
-          </div>
+          <button class="btn-list">Edit</button>
+          <button class="btn-list">Delete</button>
+        </div>
+        <div class="icons">
+          <img src="assets/icon/" alt="" />
         </div>
       </div>
     </div>
-
-    <!-- End Of Form -->
+    <!-- End List -->
   </body>
 </html>

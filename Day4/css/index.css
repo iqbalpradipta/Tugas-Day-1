@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.cdnfonts.com/css/poppins');
 
 * {
   font-family: 'Poppins';
@@ -111,11 +110,11 @@
   text-decoration: none;
 }
 
-.icon{
-  display: flex; 
-  width: 30%; 
-  text-align: center; 
-  padding-top: 40px; 
-  margin-left: 0px; 
-  gap: 2px
+.icon {
+  display: flex;
+  width: 30%;
+  text-align: center;
+  padding-top: 40px;
+  margin-left: 0px;
+  gap: 2px;
 }
