@@ -1,0 +1,55 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+* {
+  font-family: 'Poppins';
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #f4f3f3;
+  height: 65px;
+}
+
+.div-navbar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.navbar-link {
+  font-size: 20px;
+}
+
+.navbar-link a {
+  color: black;
+  text-decoration: none;
+}
+
+.navbar-link a:hover {
+  color: rgb(12, 70, 52);
+}
+
+.contact-nav {
+  position: absolute;
+  right: 100px;
+  top: 14px;
+  border-radius: 8px;
+  width: 100px;
+  height: 40px;
+  color: white;
+  background-color: #111727;
+}
+
+.contact-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.judul {
+  text-align: center;
+  font-size: larger;
+  padding-top: 12px;
+}

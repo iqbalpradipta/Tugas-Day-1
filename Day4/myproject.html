@@ -30,17 +30,17 @@
     <!-- Form -->
     <div class="form-project" style="background-color: #e1e5e9">
       <div class="form-container">
-        <form>
+        <form onsubmit="submitProj(event)">
           <h1 class="judul">Add My Project</h1>
           <br />
           <div>
-            <label for="nameproj">Project Name</label>
+            <label for="inputNameProj">Project Name</label>
             <input type="text" id="inputNameProj" class="projectInput" />
-            <label for="name">Start Date</label>
-            <input type="text" id="inputstartdate" class="Startdate" />
-            <label for="name" style="position: relative; bottom: 90px; left: 187px">End Date</label>
-            <input type="text" id="inputenddate" class="Enddate" />
-            <label for="name" style="position: relative; right: 260px; bottom: 5px">Description</label>
+            <label for="inputstartdate">Start Date</label>
+            <input type="date" id="inputstartdate" class="Startdate" />
+            <label for="inputenddate" style="position: relative; bottom: 90px; left: 198px">End Date</label>
+            <input type="date" id="inputenddate" class="Enddate" />
+            <label for="inputdescription" style="position: relative; right: 275px; bottom: 5px">Description</label>
             <textarea id="inputdescription" class="description"></textarea>
           </div>
           <label style="position: relative; bottom: 30px">Technologies</label>
@@ -65,36 +65,18 @@
               </label>
             </div>
           </div>
+          <button class="submit">Submit</button>
         </form>
       </div>
     </div>
     <!-- End Of Form -->
 
     <!-- List of Project -->
-    <div id="contents" class="myprojectlist">
-      <h1 class="judul">My Project</h1>
-      <div class="project-items">
-        <div class="images">
-          <img src="assets/image/iqbal.jpg" />
-        </div>
-        <div class="sub-title">
-          <p>Dumbways Mobile App - 2021</p>
-        </div>
-        <div class="duration">
-          <p>durasi: 3 bulan</p>
-        </div>
-        <div class="descriptions">
-          <p>App that used for dumbways student, it was deployed and can downloaded on playstore. Happy Download</p>
-        </div>
-        <div>
-          <button class="btn-list">Edit</button>
-          <button class="btn-list">Delete</button>
-        </div>
-        <div class="icons">
-          <img src="assets/icon/" alt="" />
-        </div>
-      </div>
+    <!-- Dynamic list -->
+    <div id="contents" class="listproject" style="background-color: #F8F8F8;">
+      <h1 class="judul">MY PROJECT</h1>
     </div>
     <!-- End List -->
+    <script src="js/myproject.js"></script>
   </body>
 </html>

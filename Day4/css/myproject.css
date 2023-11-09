@@ -105,7 +105,7 @@
 .Enddate {
   position: relative;
   bottom: 58px;
-  left: 110px;
+  left: 115px;
   height: 38px;
   width: 50%;
   justify-items: end;
@@ -159,8 +159,8 @@
 
 .empty{
   position: absolute;
-  right: 79.8%;
-  width: 75px;
+  right: 79.6%;
+  width: 79px;
   height: 40px;
   border-radius: 8px;
   background-color: #E4E4E4;
@@ -173,7 +173,7 @@
 
 .reactjs{
   position: relative;
-  right: 88px;
+  right: 91px;
 }
 
 .nextjs{
@@ -183,14 +183,76 @@
 
 .typescript{
   position: relative;
-  right: 80px;
+  right: 85px;
 }
 
-.project-items{
+.outer-box{
+  background-color: #ffff;
+  box-shadow: 1px 1px #EAEAEA;
+  border: 1px solid #ffff;
+  margin: 40px 10px;
+  height: 450px;
+  width: 500px;
+}
+
+.img{
+  position: relative;
+  margin-left: 100px;
+  margin-right: 100px;
+  top: 20px;
+  left: -30px;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.title{
+  position: relative;
+  top: 20px;
+  left: 70px;
+}
+
+.times{
+  position: relative;
+  color: #979292;
+  font-size: 13px;
+  top: 20px;
+  left: 70px;
+}
+
+.desc{
+  position: relative;
+  font-size: 15px;
+  top: 35px;
+  left: 70px;
+  width: 400px;
+}
+
+.icon{
+  position: relative;
+  top: 30px;
+  left: 58px;
+  width: 30px;
+  margin: 10px;
+}
+
+.btn-list{
+  position: relative;
+  top: 55px;
+  right: 103px;
+  margin: 10px;
+  width: 70px;
+}
+
+.submit {
   display: flex;
-  border: 1px solid black;
-  width: 29.6%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
+  left: 290px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  width: 100px;
+  height: 30px;
+  background-color: #111727;
+  color: #ffff;
 }
