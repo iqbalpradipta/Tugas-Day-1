@@ -122,6 +122,7 @@
   display: flex;
   position: relative;
   top: 10px;
+  right: 2px;
   justify-content: end;
   width: 98%;
   font-size: 20px;
@@ -159,7 +160,7 @@
 
 .empty{
   position: absolute;
-  right: 79.6%;
+  right: 78.9%;
   width: 79px;
   height: 40px;
   border-radius: 8px;
@@ -173,7 +174,7 @@
 
 .reactjs{
   position: relative;
-  right: 91px;
+  right: 87px;
 }
 
 .nextjs{
@@ -183,7 +184,7 @@
 
 .typescript{
   position: relative;
-  right: 85px;
+  right: 80px;
 }
 
 .outer-box{
@@ -242,12 +243,15 @@
   right: 103px;
   margin: 10px;
   width: 70px;
+  background-color: #111727;
+  color: #ffff;
+  border-radius: 20px;
 }
 
 .submit {
   display: flex;
   position: relative;
-  left: 290px;
+  left: 270px;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
