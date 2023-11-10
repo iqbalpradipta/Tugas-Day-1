@@ -211,6 +211,8 @@
   position: relative;
   top: 20px;
   left: 70px;
+  color: #111727;
+  text-decoration: none;
 }
 
 .times{
@@ -219,6 +221,7 @@
   font-size: 13px;
   top: 20px;
   left: 70px;
+  text-decoration: none;
 }
 
 .desc{
@@ -227,6 +230,8 @@
   top: 35px;
   left: 70px;
   width: 400px;
+  color: #111727;
+  text-decoration: none;
 }
 
 .icon{
@@ -244,8 +249,9 @@
   margin: 10px;
   width: 70px;
   background-color: #111727;
-  color: #ffff;
+  color: white;
   border-radius: 20px;
+  text-decoration: none;
 }
 
 .submit {
@@ -259,4 +265,8 @@
   height: 30px;
   background-color: #111727;
   color: #ffff;
+}
+
+.a {
+  text-decoration: none;
 }
