@@ -106,7 +106,7 @@
 .Enddate {
   position: relative;
   bottom: 58px;
-  left: 115px;
+  left: 105px;
   height: 38px;
   width: 50%;
   justify-items: end;
@@ -147,7 +147,7 @@
 .choose{
   position: absolute;
   font-size: 15px;
-  right: 79.8%;
+  right: 78%;
   width: 75px;
   height: 25px;
   text-align: center;
@@ -161,7 +161,7 @@
 
 .empty{
   position: absolute;
-  right: 78.9%;
+  right: 78%;
   width: 79px;
   height: 40px;
   border-radius: 8px;
@@ -175,7 +175,7 @@
 
 .reactjs{
   position: relative;
-  right: 87px;
+  right: 85px;
 }
 
 .nextjs{
@@ -185,13 +185,13 @@
 
 .typescript{
   position: relative;
-  right: 80px;
+  right: 78px;
 }
 
 .submit {
   display: flex;
   position: relative;
-  left: 270px;
+  left: 260px;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
