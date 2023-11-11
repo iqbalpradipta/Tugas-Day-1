@@ -37,16 +37,6 @@ function submitProj(event) {
     image: inputImage,
   };
 
-  if (proj.NodeJS !== true) {
-    checkboxNode.style.display = 'none';
-  } else if (proj.ReactJS !== true) {
-    checkboxReact.style.display = 'none';
-  } else if (proj.NextJS !== true) {
-    checkboxNext.style.display = 'none';
-  } else if (proj.Typescript !== true) {
-    checkboxType.style.display = 'none';
-  }
-
   dataProj.push(proj);
   console.log('dataProj', dataProj);
   renderMyProject();
@@ -56,20 +46,22 @@ function renderMyProject() {
   document.getElementById('contents').innerHTML = '';
   for (let i = 0; i < dataProj.length; i++) {
     document.getElementById('contents').innerHTML += `
-    <a href="myproject-detail.html" style="text-decoration: none">
-        <div class="outer-box">
+    <div class="outer-box">
+        <a href="myproject-detail.html" style="text-decoration: none">
           <img class="img" src="${dataProj[i].image}" />
           <h4 class="title">${dataProj[i].title}</h4>
           <p class="times">durasi: 3 bulan</p>
           <p class="desc">${dataProj[i].Description}</p>
-          <img src="assets/icon/node-js.png" class="icon" id="nodeIcon${i}" style="display: ${dataProj[i].NodeJS ? 'block' : 'none'};" />
-          <img src="assets/icon/atom.png" class="icon" id="reactIcon${i}" style="display: ${dataProj[i].ReactJS ? 'block' : 'none'};" />
-          <img src="assets/icon/next.png" class="icon" id="nextIcon${i}" style="display: ${dataProj[i].NextJS ? 'block' : 'none'};" />
-          <img src="assets/icon/typescript.png" class="icon" id="typescriptIcon${i}" style="display: ${dataProj[i].Typescript ? 'block' : 'none'};" />
+          <div class="icon-container">
+            <img src="assets/icon/node-js.png" class="icon" style="display: ${dataProj[i].NodeJS ? 'block' : 'none'};" />
+            <img src="assets/icon/atom.png" class="icon" style="display: ${dataProj[i].ReactJS ? 'block' : 'none'};" />
+            <img src="assets/icon/next.png" class="icon" style="display: ${dataProj[i].NextJS ? 'block' : 'none'};" />
+            <img src="assets/icon/typescript.png" class="icon" style="display: ${dataProj[i].Typescript ? 'block' : 'none'};" />
+          </div>
           <button class="btn-list">Edit</button>
           <button class="btn-list">Delete</button>
-        </div>
-    </a>
+        </a>
+    </div>
     `;
   }
 }
