@@ -48,10 +48,24 @@
   text-decoration: none;
 }
 
-.judul {
-  text-align: center;
-  font-size: larger;
-  padding-top: 12px;
+
+.main-content{
+  width: 400px;
+}
+
+.title{
+  position: relative;
+  left: 100%;
+  text-align: center; 
+  margin: 30px; 
+  font-size: 20px
+}
+
+.img{
+  position: relative; 
+  width: 550px; 
+  height: 300px; 
+  left: 110px
 }
 
 .detail{
@@ -142,4 +156,13 @@
   left: 123px;
   width: 20px;
   height: 20px;
+}
+
+.content {
+  position: relative; 
+  bottom: 270px; 
+  width: 80%; 
+  left: 110px; 
+  font-size: 15px; 
+  color: #39393B;
 }
