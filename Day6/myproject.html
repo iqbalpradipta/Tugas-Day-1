@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>My Project</title>
+    <link rel="stylesheet" href="css/myproject.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="div-navbar">
+        <ul style="display: flex; list-style: none; gap: 50px; align-items: center">
+          <li>
+            <img src="assets/image/brandred.png" alt="dumbwaysID" style="height: 50px" />
+          </li>
+          <li class="navbar-link">
+            <a href="index.html"> Home </a>
+          </li>
+          <li class="navbar-link">
+            <a href="myproject.html"> My Project </a>
+          </li>
+        </ul>
+        <div>
+          <button class="contact-nav">
+            <a href="contact.html">Contact Me</a>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Form -->
+    <div class="form-project" style="background-color: #e1e5e9">
+      <div class="form-container">
+        <form onsubmit="submitProj(event)">
+          <h1 class="judul">Add My Project</h1>
+          <br />
+          <div>
+            <label for="inputNameProj">Project Name</label>
+            <input type="text" id="inputNameProj" class="projectInput" />
+            <label for="inputstartdate" time datetime="YYYY-MM-DDThh:mm:ssTZD">Start Date</label>
+            <input type="date" id="inputstartdate" class="Startdate" />
+            <label for="inputenddate" style="position: relative; bottom: 90px; left: 182px" time datetime="time datetime="1914-12-20"">End Date</label>
+            <input type="date" id="inputenddate" class="Enddate" />
+            <label for="inputdescription" style="position: relative; right: 255px; bottom: 5px">Description</label>
+            <textarea id="inputdescription" class="description"></textarea>
+          </div>
+          <label style="position: relative; bottom: 30px">Technologies</label>
+          <div>
+            <input type="checkbox" id="checkboxNode" class="nodejs" />
+            <label for="nodejs" class="nodejs">Node JS</label>
+            <input type="checkbox" id="checkboxReact" class="reactjs" />
+            <label for="reactjs" class="reactjs">React JS</label>
+            <input type="checkbox" id="checkboxNext" class="nextjs" />
+            <label for="nextjs" class="nextjs">Next JS</label>
+            <input type="checkbox" id="checkboxType" class="typescript" />
+            <label for="typescript" class="typescript">Typescript</label>
+          </div>
+          <div>
+            <label style="position: relative; top: 10px; left: 2px">Upload Image</label>
+            <div class="input-form-image">
+              <input type="file" id="inputImage" hidden />
+              <label for="inputImage">
+                <p class="empty">&nbsp</p>
+                <p class="choose">Choose</p>
+                <img src="assets/icon/file.png" alt="file" />
+              </label>
+            </div>
+          </div>
+          <button class="submit" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <!-- End Of Form -->
+
+    <!-- List of Project -->
+    <h1 class="judul-list">MY PROJECT</h1>
+    <div id="contents" class="listproject">
+      <!-- Dynamic Content -->
+    </div>
+    <!-- End List -->
+    <script src="js/myproject.js"></script>
+  </body>
+</html>
