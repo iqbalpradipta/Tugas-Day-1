@@ -19,20 +19,29 @@
           <li>
             <img src="assets/image/brandred.png" alt="dumbwaysID" style="height: 50px" />
           </li>
-          <li class="navbar-link">
+          <li>
+            <img src="assets/icon/hamburger.png" title="hamburger icons" class="nav-hamburger" id="nav-hamburger" onclick="iconBar()">
+          </li>
+          <li class="navbar-link nav-text">
             <a href="index.html"> Home </a>
           </li>
-          <li class="navbar-link">
+          <li class="navbar-link nav-text">
             <a href="myproject.html"> My Project </a>
           </li>
         </ul>
         <div>
           <button class="contact-nav">
-            <a href="contact.html"> Contact Me</a>
+            <a href="contact.html">Contact Me</a>
           </button>
         </div>
       </div>
     </nav>
+    <div class="iconBar-container" id="iconBar-container">
+      <a href="index.html" class="active">Home</a>
+      <a href="myproject.html">My Project</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+
     <!-- End of Navbar -->
 
     <!-- Outer -->
@@ -73,5 +82,6 @@
       </div>
     </div>
     <!-- End of Outer -->
+    <script src="js/nav.js"></script>
   </body>
 </html>

@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -34,25 +34,21 @@
 }
 
 .nav-hamburger {
+  display: none;
   position: absolute;
   top: 10px;
   right: 120px;
   height: 50px;
 }
 
-.nav-hamburger a {
-  color: white;
-  border: 2px solid white;
-  background-color: #9a9a9a;
-  text-align: center;
-  padding: 10px;
-}
-
 .iconBar-container {
   display: none;
+  flex-direction: column;
 }
 
 .iconBar-container a {
+  display: flex;
+  justify-content: center;
   color: white;
   border: 2px solid white;
   background-color: #9a9a9a;
@@ -60,7 +56,7 @@
   padding: 10px;
 }
 
-.hamburger-nav-container .active {
+.iconBar-container .active {
   background-color: #ff4500;
 }
 
@@ -119,6 +115,11 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .div-navbar {
+    width: 80%;
+    margin-left: 20px;
+  }
+
   .nav-text {
     display: none;
   }
@@ -136,10 +137,4 @@
     display: none;
   }
 
-  .hamburger-nav-container {
-    display: block;
-    font-size: 23px;
-    display: none;
-    flex-direction: column;
-  }
 }

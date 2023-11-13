@@ -1,14 +1,10 @@
-let iconOpen = false;
-
 function iconBar() {
-  let iconBar = document.getElementById("nav-hamburger")
+  let iconOpen = document.getElementById('iconBar-container');
 
-  if(!iconOpen){
-    iconBar.style.display = "flex"
-    iconOpen = true
-  }else {
-    iconBar.style.display = "none"
-    iconOpen= false
+  if (iconOpen.style.display === 'block') {
+    iconOpen.style.display = 'none';
+  } else {
+    iconOpen.style.display = 'block';
   }
-
+  console.log(iconOpen);
 }
