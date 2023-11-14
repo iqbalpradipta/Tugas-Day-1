@@ -217,4 +217,37 @@
   .nav-text {
     display: none;
   }
+
+  .gambar{
+    position: relative;
+    top: 150px;
+  }
+
+  .content{
+    bottom: 100px;
+  }
+
+  .img{
+    width: 100%;
+  }
+
+  .detail{
+    left: 100px;
+  }
+
+  .duration{
+    position: relative;
+    left: 49px;
+  }
+
+  .tech{
+    left: 310px;
+    bottom: 400px;
+  }
+
+  .title{
+    position: relative;
+    left: 100px;
+  }
+
 }
