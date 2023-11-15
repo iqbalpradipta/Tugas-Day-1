@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/testimonial.css" />
+    <title>Testimonial</title>
+  </head>
+  <body style="background-color: #e1e5e9">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="div-navbar">
+        <ul style="display: flex; list-style: none; gap: 50px; align-items: center">
+          <li>
+            <img src="assets/image/brandred.png" alt="dumbwaysID" style="height: 50px" />
+          </li>
+          <li>
+            <img src="assets/icon/hamburger.png" title="hamburger icons" class="nav-hamburger" id="nav-hamburger" onclick="iconBar()" />
+          </li>
+          <li class="navbar-link nav-text">
+            <a href="index.html"> Home </a>
+          </li>
+          <li class="navbar-link nav-text">
+            <a href="myproject.html"> My Project </a>
+          </li>
+          <li class="navbar-link nav-text">
+            <a href="testimonial.html"> Testimonal </a>
+          </li>
+        </ul>
+        <div>
+          <button class="contact-nav">
+            <a href="contact.html">Contact Me</a>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="iconBar-container" id="iconBar-container">
+      <a href="index.html">Home</a>
+      <a href="myproject.html">My Project</a>
+      <a href="testimonial.html" class="active">Testimonial</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+    <!-- End of Navbar -->
+
+    <!-- main content -->
+    <div class="title">
+      <h1>My Testimonial</h1>
+    </div>
+    <!-- Rating Area -->
+    <div class="rating-title">
+      <h2>Rating By Star</h2>
+    </div>
+    <div class="btn">
+      <button class="btn-rating" onclick="AllReview()">All</button>
+      <button class="btn-rating" onclick="FilterReview(1);">1 <i class="fa-solid fa-star" style="color: #ffffff"></i></button>
+      <button class="btn-rating" onclick="FilterReview(2);">2 <i class="fa-solid fa-star" style="color: #ffffff"></i></button>
+      <button class="btn-rating" onclick="FilterReview(3);">3 <i class="fa-solid fa-star" style="color: #ffffff"></i></button>
+      <button class="btn-rating" onclick="FilterReview(4);">4 <i class="fa-solid fa-star" style="color: #ffffff"></i></button>
+      <button class="btn-rating" onclick="FilterReview(5);">5 <i class="fa-solid fa-star" style="color: #ffffff"></i></button>
+    </div>
+    <!-- End Of Rating -->
+    <div class="content" id="testimonial">
+      <!-- Javascript HTML -->
+    </div>
+    <!-- End of Main content -->
+
+    <script src="js/nav.js"></script>
+    <script src="js/testimonialHOF.js"></script>
+  </body>
+</html>
