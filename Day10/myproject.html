@@ -1,113 +1,123 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Add Project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/myproject.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iqbal Pradipta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+      * {
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+      }
+
+      .btn-dark {
+        background-color: #111727;
+        border: 1px solid #111727;
+      }
+      .btn-dark:hover {
+        background-color: #000000;
+        border: 1px solid #111727;
+      }
+
+      .border-white {
+        background-color: #fafafa;
+        box-shadow: 0px 0px 4px -1px rgba(107, 107, 107, 0.75);
+      }
+    </style>
   </head>
-  <body>
+
+  <body style="background-color: #e1e5e9">
     <!-- Navbar -->
-    <nav class="navbar">
-      <div class="div-navbar">
-        <ul style="display: flex; list-style: none; gap: 50px; align-items: center">
-          <li>
-            <img src="assets/image/brandred.png" alt="dumbwaysID" style="height: 50px" />
-          </li>
-          <li>
-            <img src="assets/icon/hamburger.png" title="hamburger icons" class="nav-hamburger" id="nav-hamburger" onclick="iconBar()">
-          </li>
-          <li class="navbar-link nav-text">
-            <a href="index.html"> Home </a>
-          </li>
-          <li class="navbar-link nav-text">
-            <a href="myproject.html"> My Project </a>
-          </li>
-          <li class="navbar-link nav-text">
-            <a href="testimonial.html"> Testimonal </a>
-          </li>
-        </ul>
-        <div>
-          <button class="contact-nav">
-            <a href="contact.html">Contact Me</a>
-          </button>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-3">
+          <img src="assets/image/brandred.png" alt="dumbwaysID" width="80px" height="55px" />
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link ms-2" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active ms-3" href="myproject.html">Add Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-3" href="testimonial.html">Testimonial</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="button">
+            <button class="btn btn-dark me-5" type="button"><a href="contact.html" style="color: #ffff; text-decoration: none">Contact Me</a></button>
+          </form>
         </div>
       </div>
     </nav>
-    <div class="iconBar-container" id="iconBar-container">
-      <a href="index.html">Home</a>
-      <a href="myproject.html" class="active">My Project</a>
-      <a href="testimonial.html">Testimonial</a>
-      <a href="contact.html">Contact Me</a>
-    </div>
-
-    <!-- End of Navbar -->
+    <!-- End Of Navbar -->
 
     <!-- Form -->
-    <div class="form-project" style="background-color: #e1e5e9">
-      <div class="form-container">
-        <form onsubmit="submitProj(event)">
-          <h1 class="judul">Add My Project</h1>
-          <br />
-          <div>
-            <label for="inputNameProj">Project Name</label>
-            <input type="text" id="inputNameProj" class="projectInput" />
-            <label for="inputstartdate" time datetime="YYYY-MM-DDThh:mm:ssTZD">Start Date</label>
-            <input type="date" id="inputstartdate" class="Startdate" />
-            <label for="inputenddate" style="position: relative; bottom: 90px; left: 182px" datetime="1914-12-20">End Date</label>
-            <input type="date" id="inputenddate" class="Enddate" />
-            <label for="inputdescription" style="position: relative; right: 255px; bottom: 5px">Description</label>
-            <textarea id="inputdescription" class="description"></textarea>
-          </div>
-          <label style="position: relative; bottom: 30px">Technologies</label>
-          <div>
-            <input type="checkbox" id="checkboxNode" class="nodejs" />
-            <label for="nodejs" class="nodejs">Node JS</label>
-            <input type="checkbox" id="checkboxReact" class="reactjs" />
-            <label for="reactjs" class="reactjs">React JS</label>
-            <input type="checkbox" id="checkboxNext" class="nextjs" />
-            <label for="nextjs" class="nextjs">Next JS</label>
-            <input type="checkbox" id="checkboxType" class="typescript" />
-            <label for="typescript" class="typescript">Typescript</label>
-          </div>
-          <div>
-            <label style="position: relative; top: 10px; left: 2px">Upload Image</label>
-            <div class="input-form-image">
-              <input type="file" id="inputImage" hidden />
-              <label for="inputImage">
-                <p class="empty">&nbsp</p>
-                <p class="choose">Choose</p>
-                <img src="assets/icon/file.png" alt="file" />
-              </label>
-            </div>
-          </div>
-          <button class="submit" type="submit">Submit</button>
-        </form>
+    <h1 class="text-center fw-bold h3 pt-sm-4">Add My Project</h1>
+    <form class="container-sm pt-sm-4 p-sm-5 w-50" onsubmit="submitProj(event)">
+      <div class="mb-sm-3">
+        <label for="inputNameProj" class="form-label fw-bold">Project Name</label>
+        <input type="text" class="form-control form-control-lg" id="inputNameProj" />
+      </div>
+      <div class="row">
+        <div class="mb-sm-3 col-sm-6">
+          <label for="inputstartdate" class="form-label fw-bold">Start Date</label>
+          <input type="date" class="form-control" id="inputstartdate" />
+        </div>
+        <div class="mb-sm-3 col-sm-6">
+          <label for="inputenddate" class="form-label fw-bold">End Date</label>
+          <input type="date" class="form-control" id="inputenddate" />
+        </div>
+      </div>
+      <div class="mb-sm-3">
+        <label for="inputdescription" class="form-label fw-bold">Description</label>
+        <textarea class="form-control" id="inputdescription" rows="3"></textarea>
+      </div>
+      <p class="fw-bold">Technologies</p>
+      <div class="row ps-sm-3">
+        <div class="col-sm-4 form-check">
+          <input class="form-check-input" type="checkbox" value="" id="checkboxNode" />
+          <label class="form-check-label" for="checkboxNode">Node JS </label>
+        </div>
+        <div class="col-sm-4 form-check">
+          <input class="form-check-input" type="checkbox" value="" id="checkboxNext" />
+          <label class="form-check-label" for="checkboxNext">Next JS </label>
+        </div>
+      </div>
+      <div class="row ps-sm-3 pt-sm-2">
+        <div class="col-sm-4 form-check">
+          <input class="form-check-input" type="checkbox" value="" id="checkboxReact" />
+          <label class="form-check-label" for="checkboxReact">React JS </label>
+        </div>
+        <div class="col-sm-4 form-check mb-sm-3">
+          <input class="form-check-input" type="checkbox" value="" id="checkboxType" />
+          <label class="form-check-label" for="checkboxType">Typescript </label>
+        </div>
+      </div>
+      <div class="col-sm mb-3">
+        <label class="form-label fw-bold" for="inputImage">Upload Image</label>
+        <div class="input-group" for="inputImage">
+          <input type="file" class="form-control" id="inputImage" />
+          <div class="input-group-text"><img src="assets/icon/file.png" alt="file" /></div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-dark rounded-5 w-25 float-end">Submit</button>
+    </form>
+    <!-- End of Form -->
+
+    <!-- List of Content -->
+    <div class="container-fluid mt-3" style="background-color: #ffff">
+      <h3 class="text-sm-center">My Project</h3>
+      <div id="contents" class="row row-cols-1 row-cols-md-3">
+        <!-- Dynamic Content -->
       </div>
     </div>
-    <!-- End Of Form -->
-
-    <!-- List of Project -->
-    <h1 class="judul-list">MY PROJECT</h1>
-    <div id="contents" class="listproject">
-      <!-- Dynamic Content -->
-      <div class="outer-box">
-        <a href="myproject-detail.html" style="text-decoration: none">
-          <img class="img" src="${dataProj[i].image}" />
-          <h4 class="title">${dataProj[i].title}</h4>
-          <p class="times">durasi: ${dataProj[i].Times}</p>
-          <p class="desc">${dataProj[i].Description}</p>
-          <div class="icon-container">
-            <img src="assets/icon/node-js.png" class="icon" style="display: ${dataProj[i].NodeJS ? 'block' : 'none'};" />
-            <img src="assets/icon/atom.png" class="icon" style="display: ${dataProj[i].ReactJS ? 'block' : 'none'};" />
-            <img src="assets/icon/next.png" class="icon" style="display: ${dataProj[i].NextJS ? 'block' : 'none'};" />
-            <img src="assets/icon/typescript.png" class="icon" style="display: ${dataProj[i].Typescript ? 'block' : 'none'};" />
-          </div>
-          <button class="btn-list">Edit</button>
-          <button class="btn-list">Delete</button>
-        </a>
-    </div>
-    </div>
-    <!-- End of Outer -->
-    <script src="js/nav.js"></script>
+    <!-- End List of Content -->
     <script src="js/myproject.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>

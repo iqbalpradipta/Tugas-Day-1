@@ -75,23 +75,21 @@ function renderMyProject() {
   document.getElementById("contents").innerHTML = "";
   for (let i = 0; i < dataProj.length; i++) {
     document.getElementById("contents").innerHTML += `
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card">
-          <img src="${dataProj[i].image}" class="card-img-top" />
-          <div class="card-body">
-            <h5 class="card-title fw-bold fs-4">${dataProj[i].title}</h5>
-            <p class="text-sm-start" style="font-size: 14px">Durasi: ${dataProj[i].Times}</p>
-            <p class="card-text mb-sm-4">${dataProj[i].Description}</p>
-            <div class="col mb-sm-4">
-              <img src="assets/icon/node-js.png" class="col-sm-1" style="display: ${dataProj[i].NodeJS ? 'block' : 'none'};" />
-              <img src="assets/icon/atom.png" class="col-sm-1" style="display: ${dataProj[i].ReactJS ? 'block' : 'none'};" />
-              <img src="assets/icon/next.png" class="col-sm-1" style="display: ${dataProj[i].NextJS ? 'block' : 'none'};" />
-              <img src="assets/icon/typescript.png" class="col-sm-1" style="display: ${dataProj[i].Typescript ? 'block' : 'none'};" />
-            </div>
-            <a class="btn btn-dark w-25 rounded-5">Edit</a>
-            <a class="btn btn-dark w-25 rounded-5 ms-sm-3">Delete</a>
+    <div class="col">
+      <div class="card">
+        <img src="${dataProj[i].image}" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title fw-bold fs-4">${dataProj[i].title}</h5>
+          <p class="text-sm-start" style="font-size: 14px">Durasi: ${dataProj[i].Times}</p>
+          <p class="card-text mb-sm-4">${dataProj[i].Description}</p>
+          <div class="col mb-sm-4">
+            <img src="assets/icon/node-js.png" class="col-sm-1" style="display: ${dataProj[i].NodeJS ? 'block' : 'none'};" />
+            <img src="assets/icon/atom.png" class="col-sm-1" style="display: ${dataProj[i].ReactJS ? 'block' : 'none'};" />
+            <img src="assets/icon/next.png" class="col-sm-1" style="display: ${dataProj[i].NextJS ? 'block' : 'none'};" />
+            <img src="assets/icon/typescript.png" class="col-sm-1" style="display: ${dataProj[i].Typescript ? 'block' : 'none'};" />
           </div>
+          <a class="btn btn-dark w-25 rounded-5">Edit</a>
+          <a class="btn btn-dark w-25 rounded-5 ms-sm-3">Delete</a>
         </div>
       </div>
     </div>
