@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>My Project</title>
+    <title>Add Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/myproject.css" />
   </head>
@@ -89,6 +89,22 @@
     <h1 class="judul-list">MY PROJECT</h1>
     <div id="contents" class="listproject">
       <!-- Dynamic Content -->
+      <div class="outer-box">
+        <a href="myproject-detail.html" style="text-decoration: none">
+          <img class="img" src="${dataProj[i].image}" />
+          <h4 class="title">${dataProj[i].title}</h4>
+          <p class="times">durasi: ${dataProj[i].Times}</p>
+          <p class="desc">${dataProj[i].Description}</p>
+          <div class="icon-container">
+            <img src="assets/icon/node-js.png" class="icon" style="display: ${dataProj[i].NodeJS ? 'block' : 'none'};" />
+            <img src="assets/icon/atom.png" class="icon" style="display: ${dataProj[i].ReactJS ? 'block' : 'none'};" />
+            <img src="assets/icon/next.png" class="icon" style="display: ${dataProj[i].NextJS ? 'block' : 'none'};" />
+            <img src="assets/icon/typescript.png" class="icon" style="display: ${dataProj[i].Typescript ? 'block' : 'none'};" />
+          </div>
+          <button class="btn-list">Edit</button>
+          <button class="btn-list">Delete</button>
+        </a>
+    </div>
     </div>
     <!-- End of Outer -->
     <script src="js/nav.js"></script>
