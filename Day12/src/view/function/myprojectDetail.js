@@ -1,17 +1,12 @@
+const data = require('./data');
+
 function myprojectDetail(req, res) {
-  const id = req.params.id;
-  const title = 'Bang Ngapain menjadi challange';
-  const description = 'Challange ini keren abis bersama Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, at.';
+  const { id } = req.params;
 
-  console.log("detail ID: ", id)
-
-  const data = {
-    id,
-    title,
-    description,
-  };
-
-  res.render('myproject-detail', { data });
+  const dataFilter = data[parseInt(id)];
+  dataFilter.id = parseInt(id);
+  console.log('dataFilter', dataFilter);
+  res.render('myproject-detail', { data: dataFilter });
 }
 
 module.exports = myprojectDetail;

@@ -1,4 +1,6 @@
 function PostMyproject(req, res) {
+  const data = require('./data');
+
   const title = req.body.title;
   const startdate = req.body.startdate;
   const enddate = req.body.enddate;
@@ -9,7 +11,16 @@ function PostMyproject(req, res) {
   console.log('enddate: ', enddate);
   console.log('Description: ', description);
 
-  res.redirect('myproject-detail/1');
+  const dataProj = {
+    title, 
+    startdate, 
+    enddate, 
+    description
+  }
+
+  data.unshift(dataProj)
+
+  res.redirect('/');
 }
 
 module.exports = PostMyproject;
