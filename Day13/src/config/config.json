@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "postgres",
-    "password": 1234,
-    "database": "personal-web",
-    "host": "127.0.0.1",
+    "password": "mbangg12",
+    "database": "personal_web",
+    "host": "localhost",
     "dialect": "postgres"
   },
   "test": {

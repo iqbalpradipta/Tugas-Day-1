@@ -2,7 +2,12 @@ const express = require('express');
 const path = require('path');
 const { title } = require('process');
 const app = express();
-const port = 5000;
+const port = 5500;
+
+const config = require('./src/config/config.json')
+const { Sequelize } = require('sequelize')
+const sequelize = new Sequelize(config.development)
+
 
 const home = require('./src/view/function/home');
 const deleteList = require('./src/view/function/deleteList');
