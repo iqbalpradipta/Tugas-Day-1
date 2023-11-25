@@ -1,90 +1,129 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>My Project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/myproject-detail.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iqbal Pradipta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+      * {
+        font-family: "Poppins", sans-serif;
+        text-decoration: none;
+      }
+
+      .btn-dark {
+        background-color: #111727;
+        border: 1px solid #111727;
+      }
+      .btn-dark:hover {
+        background-color: #000000;
+        border: 1px solid #111727;
+      }
+
+      .border-white {
+        background-color: #fafafa;
+        box-shadow: 0px 0px 4px -1px rgba(107, 107, 107, 0.75);
+      }
+    </style>
   </head>
-  <body style="background-color: #e3e7eb">
+
+  <body style="background-color: #e1e5e9">
     <!-- Navbar -->
-    <nav class="navbar">
-      <div class="div-navbar">
-        <ul style="display: flex; list-style: none; gap: 50px; align-items: center">
-          <li>
-            <img src="assets/image/brandred.png" alt="dumbwaysID" style="height: 50px" />
-          </li>
-          <li>
-            <img src="assets/icon/hamburger.png" title="hamburger icons" class="nav-hamburger" id="nav-hamburger" onclick="iconBar()" />
-          </li>
-          <li class="navbar-link nav-text">
-            <a href="index.html"> Home </a>
-          </li>
-          <li class="navbar-link nav-text">
-            <a href="myproject.html"> My Project </a>
-          </li>
-          <li class="navbar-link nav-text">
-            <a href="testimonial.html"> Testimonal </a>
-          </li>
-        </ul>
-        <div>
-          <button class="contact-nav">
-            <a href="contact.html">Contact Me</a>
-          </button>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-3">
+          <img src="assets/image/brandred.png" alt="dumbwaysID" width="80px" height="55px" />
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active ms-2" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-3" href="myproject.html">Add Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-3" href="testimonial.html">Testimonial</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="button">
+            <button class="btn btn-dark me-5" type="button">Contact Me</button>
+          </form>
         </div>
       </div>
     </nav>
-    <div class="iconBar-container" id="iconBar-container">
-      <a href="index.html">Home</a>
-      <a href="myproject.html" class="active">My Project</a>
-      <a href="testimonial.html">Testimonial</a>
-      <a href="contact.html">Contact Me</a>
+    <!-- End Of Navbar -->
+
+    <!-- Main Content -->
+    <div class="container-sm">
+      <h1 class="display-6 text-sm-center fw-bold">Dumbways Web App</h1>
+      <div class="row pt-sm-4">
+        <div class="col">
+          <img class="w-100 img-fluid" src="assets/image/gambarphone.png" alt="gambarProject" />
+        </div>
+        <div class="col ms-sm-4 mt-sm-1">
+          <p class="fw-bold h6 ps-sm-2">Duration</p>
+          <div class="row col-sm-7 px-sm-0 d-flex">
+            <img class="col-sm-12 img-fluid w-25 pt-sm-0 px-sm-4" src="assets/icon/calendar.png" />
+            <div class="col-sm-9 px-sm-0">
+              <p class="h6 my-sm-2">12 Jan 2021 - 11 Feb 2021</p>
+            </div>
+          </div>
+          <div class="row col-sm-7 px-sm-0 d-flex mt-sm-3">
+            <img class="col-sm-12 img-fluid w-25 pt-sm-0 px-sm-4" src="assets/icon/clock.png" />
+            <div class="col-sm-9 px-sm-0">
+              <p class="h6 my-sm-2">1 Month</p>
+            </div>
+          </div>
+          <p class="fw-bold h6 ps-sm-2 mt-sm-5">Technologies</p>
+          <div class="row col-sm-7 px-sm-0">
+            <img class="img-fluid w-25 pt-sm-0 px-sm-4" src="assets/icon/atom.png" />
+            <div class="col-sm-9 px-sm-0">
+              <p class="h6 my-sm-2">React JS</p>
+            </div>
+          </div>
+          <div class="row col-sm-7 px-sm-0 mt-sm-3">
+            <img class="img-fluid w-25 pt-sm-0 px-sm-4" src="assets/icon/node-js.png" />
+            <div class="col-sm-9 px-sm-0">
+              <p class="h6 my-sm-2">1 Month</p>
+            </div>
+          </div>
+          <div class="row col-sm-7 px-sm-0 mt-sm-3" style="position: relative; bottom: 100.9px; left: 200px">
+            <img class="img-fluid w-25 pt-sm-0 px-sm-4" src="assets/icon/icons8-javascript-50.png" />
+            <div class="col-sm-9 px-sm-0">
+              <p class="h6 my-sm-2">Javascript</p>
+            </div>
+          </div>
+          <div class="row col-sm-7 px-sm-0 mt-sm-3" style="position: relative; bottom: 100.9px; left: 200px">
+            <img class="img-fluid w-25 pt-sm-0 px-sm-4" src="assets/icon/socket_io_logo_icon_144874.png" />
+            <div class="col-sm-9 px-sm-0">
+              <p class="h6 my-sm-2">Socket IO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, possimus. Libero officiis laborum quod et quia, repudiandae iusto iure nisi numquam repellendus quisquam vitae quos eum distinctio magni cumque, deleniti nulla
+        perferendis voluptatum exercitationem eaque quidem ea maiores. Pariatur, ducimus rem quae tempora libero temporibus perferendis sequi mollitia tenetur odio distinctio numquam beatae natus expedita fuga adipisci quas labore, officiis
+        quo fugiat quos aut iure? Nihil iusto perferendis beatae iure voluptas mollitia sequi ut sunt eos modi libero, reiciendis unde ea illo corrupti animi fuga accusantium dolor, impedit placeat at repellat? Vel aspernatur consequuntur
+        itaque expedita necessitatibus sit minima. Earum sed aliquam, sit, porro quod quia atque enim doloribus corporis, doloremque placeat laboriosam velit facilis dignissimos exercitationem adipisci expedita consequuntur unde voluptatem
+        ea obcaecati ab numquam delectus. Corporis aspernatur iste molestiae blanditiis totam nesciunt fugit placeat consequuntur, quia iure sint rerum dolore error deleniti temporibus quod, atque eius, incidunt impedit nam consectetur!
+        Totam reiciendis repudiandae quod laborum voluptatibus fugit id. Laboriosam, possimus! Officia dolorum nesciunt nam expedita, nulla natus hic ducimus explicabo, facere voluptate nobis asperiores iste odit! Cum consequatur similique
+        accusamus voluptatum voluptate velit quas, neque reprehenderit ratione quod, a provident ipsam, error in autem necessitatibus minima aliquam aperiam libero! Doloremque porro facilis, doloribus exercitationem pariatur excepturi
+        praesentium saepe cupiditate in consectetur voluptate! Repellat explicabo maiores facere enim similique inventore asperiores reiciendis, dolorem suscipit tenetur. Libero fugiat ea, perferendis consectetur officiis dolor odit
+        molestias architecto. Ad pariatur illo, fugiat vero dolorem perspiciatis, voluptas a repellat est neque eveniet, suscipit inventore nemo perferendis? Perferendis exercitationem non voluptates? Iure voluptatibus nulla dolorem,
+        consequuntur sunt iusto. Amet magnam non id dolorum aperiam earum vero minus laborum cum recusandae quae provident dicta dolore quaerat ipsa reprehenderit modi consequatur ut cumque, repellat officiis eveniet error? Voluptate
+        officia praesentium ullam nihil mollitia, vitae maxime nesciunt delectus quasi. Natus temporibus asperiores enim, odit voluptatibus nesciunt dignissimos nihil minus perferendis eum eveniet, modi maiores, optio aliquam vitae qui
+        libero! Repellat consequatur in quibusdam accusamus similique quae repellendus odit perspiciatis nobis, ratione molestiae, libero cumque doloremque illo omnis totam amet, laboriosam error temporibus nostrum ad ullam hic? Labore,
+        minima alias qui nemo sunt voluptatem similique doloremque voluptatum, soluta laborum aliquam praesentium ab esse tenetur, debitis ex dolorum impedit cumque officia deserunt quibusdam saepe id? Excepturi impedit nam ea quibusdam
+        rerum architecto exercitationem neque dicta maxime, quis cumque libero. Cum hic officia, nihil excepturi facere explicabo ut consequatur nisi nulla inventore sed consectetur animi? Atque inventore in fugit! Similique modi
+        doloremque, nostrum fugiat suscipit magni, nesciunt eum nulla, minus laborum dignissimos distinctio sit omnis et fuga provident? Hic minima nobis eveniet amet cum nam unde voluptate! Nisi est totam iusto veritatis at eligendi, alias
+        amet enim, possimus laborum assumenda, quam quis molestiae. Ut, deleniti nobis. Exercitationem quae nesciunt dolorem dicta iste qui aliquam impedit magni alias, beatae, maxime pariatur non fugiat eos error, sequi facere molestiae
+        obcaecati debitis ea eaque? Ipsam cupiditate nulla corrupti minima eaque cumque! Voluptatum porro aspernatur incidunt, itaque cum aperiam ratione excepturi suscipit? Laudantium, incidunt.
+      </p>
     </div>
-
-    <!-- End of Navbar -->
-
-    <!-- main content -->
-    <div class="main-content">
-      <h1 class="title">Dumbways Web App</h1>
-      <div class="gambar">
-        <img src="assets/image/gambarphone.png" class="img" />
-      </div>
-      <!-- detail -->
-      <div class="detail">
-        <h3 class="duration">Duration</h3>
-        <p class="date">12 Jan 2021 - 11 Feb 2021</p>
-        <img src="assets/icon/calendar.png" class="calender" />
-        <p class="month">1 Month</p>
-        <img src="assets/icon/clock.png" class="times" />
-      </div>
-      <!-- end of detail -->
-      <!-- tech -->
-      <div class="tech">
-        <h3 class="duration">Technologies</h3>
-        <p class="date">React JS</p>
-        <img src="assets/icon/calendar.png" class="calender" />
-        <p class="month">Node JS</p>
-        <img src="assets/icon/clock.png" class="times" />
-        <p class="js">Javascript</p>
-        <img src="assets/icon/icons8-javascript-50.png" class="jslogo" />
-        <p class="socket">Socket IO</p>
-        <img src="assets/icon/socket_io_logo_icon_144874.png" class="socketlogo" />
-      </div>
-    </div>
-    <!-- end of tech -->
-
-    <!-- main content -->
-    <p class="content">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum numquam minima laudantium quae, repellat adipisci neque dolore alias, repellendus saepe voluptatem. Nesciunt consectetur magnam at iste dolore soluta incidunt
-      voluptatibus fugiat harum pariatur nostrum repellendus accusantium quis earum eius excepturi dignissimos delectus quos nobis molestiae enim distinctio consequatur, quo voluptates. Labore ipsa voluptate odio dicta, quibusdam aliquid
-      blanditiis consequatur ea nesciunt iste voluptatum nisi, animi quidem quae. Tempora magnam, amet consequuntur facere facilis quisquam beatae in et corrupti minima hic expedita voluptatibus tempore natus nihil rem, vitae voluptates
-      reiciendis. Itaque fugit ut ad nisi quae. Sapiente error eos quasi. Quia quod dolorum minus eaque consequuntur quo explicabo atque. Fugit quaerat inventore quidem totam facere ex quae minus. Cum, sed quis repudiandae totam ea impedit
-      consequatur expedita modi dolorum sunt, consequuntur neque! Consequatur, ad veritatis dolorum consectetur quis nemo minus molestiae rem numquam aliquid eaque aliquam quam culpa accusamus. Expedita ipsum aut qui provident nisi. Dolores
-      ex corrupti, itaque consectetur, repellat tempora nam impedit hic sapiente eius repudiandae, aut harum saepe placeat perferendis fugiat recusandae esse. Maxime ratione, quis iusto doloremque optio, quia voluptates ab sunt
-      exercitationem soluta modi nam laudantium repellendus expedita deleniti, iure temporibus harum saepe placeat est inventore.
-    </p>
-    <!-- end of main content -->
-
-    <!-- End Main Content -->
-    <!-- End of Outer -->
-    <script src="js/nav.js"></script>
+    <!-- End of main content -->
   </body>
 </html>
