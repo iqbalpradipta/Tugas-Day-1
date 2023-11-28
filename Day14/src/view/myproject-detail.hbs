@@ -1,0 +1,94 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iqbal Pradipta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"); * { font-family: "Poppins", sans-serif; text-decoration: none; } .btn-dark { background-color: #111727; border: 1px solid #111727; }
+      .btn-dark:hover { background-color: #000000; border: 1px solid #111727; } .border-white { background-color: #fafafa; box-shadow: 0px 0px 4px -1px rgba(107, 107, 107, 0.75); }
+    </style>
+  </head>
+
+  <body style="background-color: #e1e5e9">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-3">
+          <img src="/assets/image/brandred.png" alt="dumbwaysID" width="80px" height="55px" />
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active ms-2" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-3" href="/myproject">Add Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-3" href="/testimonial">Testimonial</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="button">
+            <button class="btn btn-dark me-5" type="button"><a href="/contact" style="color: #ffff; text-decoration: none">Contact Me</a></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- End Of Navbar -->
+
+    <!-- Main Content -->
+    <div class="container-sm">
+      <h1 class="display-6 text-sm-center fw-bold">{{data.name}}</h1>
+      <div class="row pt-sm-4">
+        <div class="col">
+          <img class="w-100 img-fluid" src="{{data.image}}" alt="gambarProject" />
+        </div>
+        <div class="col ms-sm-4 mt-sm-1">
+          <p class="fw-bold h6 ps-sm-2">Duration</p>
+          <div class="row col-sm-7 px-sm-0 d-flex">
+            <img class="col-sm-12 img-fluid w-25 pt-sm-0 px-sm-4" src="/assets/icon/calendar.png" />
+            <div class="col-sm-9 px-sm-0">
+              <p class="h6 my-sm-2">{{data.formatDateAwal}} - {{data.formatDateAkhir}}</p>
+            </div>
+          </div>
+          <div class="row col-sm-7 px-sm-0 d-flex mt-sm-3">
+            <img class="col-sm-12 img-fluid w-25 pt-sm-0 px-sm-4" src="/assets/icon/clock.png" />
+            <div class="col-sm-9 px-sm-0">
+              <p class="h6 my-sm-2">{{data.msg}}</p>
+            </div>
+          </div>
+          <p class="fw-bold h6 ps-sm-2 mt-sm-5">Technologies</p>
+          <div class="row col-sm-7 px-sm-0">
+            <img class="img-fluid w-25 pt-sm-0 px-sm-4" src="/assets/icon/atom.png" />
+            <div class="col-sm-9 px-sm-0">
+              <p class="h6 my-sm-2">React JS</p>
+            </div>
+          </div>
+          <div class="row col-sm-7 px-sm-0 mt-sm-3">
+            <img class="img-fluid w-25 pt-sm-0 px-sm-4" src="/assets/icon/node-js.png" />
+            <div class="col-sm-9 px-sm-0">
+              <p class="h6 my-sm-2">Node JS</p>
+            </div>
+          </div>
+          <div class="row col-sm-7 px-sm-0 mt-sm-3" style="position: relative; bottom: 100.9px; left: 200px">
+            <img class="img-fluid w-25 pt-sm-0 px-sm-4" src="/assets/icon/icons8-javascript-50.png" />
+            <div class="col-sm-9 px-sm-0">
+              <p class="h6 my-sm-2">Javascript</p>
+            </div>
+          </div>
+          <div class="row col-sm-7 px-sm-0 mt-sm-3" style="position: relative; bottom: 100.9px; left: 200px">
+            <img class="img-fluid w-25 pt-sm-0 px-sm-4" src="/assets/icon/socket_io_logo_icon_144874.png" />
+            <div class="col-sm-9 px-sm-0">
+              <p class="h6 my-sm-2">Socket IO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>
+        {{data.description}}
+      </p>
+    </div>
+    <!-- End of main content -->
+  </body>
+</html>
