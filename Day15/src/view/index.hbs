@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Iqbal Pradipta</title>
+    <title> Home | Iqbal Pradipta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); * { font-family: 'Poppins', sans-serif; text-decoration: none; } .btn-dark { background-color: #111727; border: 1px solid #111727; }
@@ -14,28 +14,40 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand ms-3">
+        <a class="navbar-brand ms-sm-3" href="#">
           <img src="/assets/image/brandred.png" alt="dumbwaysID" width="80px" height="55px" />
         </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active ms-2" aria-current="page" href="/">Home</a>
+              <a class="nav-link ms-sm-2 active fw-bold" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link ms-3" href="/myproject">Add Project</a>
+              <a class="nav-link ms-sm-3" href="/myproject">Add Project</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link ms-3" href="/testimonial">Testimonial</a>
+              <a class="nav-link ms-sm-3" href="/testimonial">Testimonial</a>
             </li>
           </ul>
-          <form class="d-flex" role="button">
-            <button class="btn btn-dark me-5" type="button"><a href="/contact" style="color: #ffff; text-decoration: none">Contact Me</a></button>
-          </form>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link me-sm-4 mt-sm-2" aria-current="page" href="/register">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-sm-5 mt-sm-2" href="/login">Login</a>
+            </li>
+          </ul>
+          <button class="btn btn-dark me-sm-5 mb-sm-0" type="button">
+            <a href="/contact" style="color: #ffff; text-decoration: none">Contact Me</a>
+          </button>
         </div>
       </div>
     </nav>
     <!-- End Of Navbar -->
+
     <!-- Main Content -->
     <div class="container p-4">
       <div class="border border-white rounded-4 d-sm-flex p-2 col-10 mx-auto pt-3">

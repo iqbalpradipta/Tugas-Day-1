@@ -18,6 +18,10 @@ const PostMyproject = require('./src/view/function/PostMyproject');
 const updateproject = require('./src/view/function/updateproject');
 const updateprojects = require('./src/view/function/updateprojects');
 const testimonial = require('./src/view/function/testimonial');
+const loginViews = require('./src/view/function/loginViews');
+const registerViews = require('./src/view/function/registerViews');
+const register = require('./src/view/function/register');
+const login = require('./src/view/function/login');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'src/view'));
@@ -37,6 +41,11 @@ app.get('/updateproject/:id', updateprojects);
 app.post('/updateproject', updateproject);
 app.get('/myproject-detail/:id', myprojectDetail);
 app.get('/testimonial', testimonial);
+
+app.get('/login', loginViews)
+app.post('/login', login)
+app.get('/register', registerViews)
+app.post('/register', register)
 
 app.listen(port, () => {
   console.log(`Server Listening at ${port}....`);
