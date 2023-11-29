@@ -8,6 +8,7 @@ async function deleteList(req, res) {
   const obj = await sequelize.query(query, { type: QueryTypes.DELETE });
 
   console.log('Data berhasil dihapus=', obj)
+  req.flash('success', 'Delete Project Success!')
 
   res.redirect("/");
 }

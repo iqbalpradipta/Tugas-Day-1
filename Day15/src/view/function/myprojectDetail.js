@@ -52,7 +52,7 @@ async function myprojectDetail(req, res) {
   
   console.log("projectDetail", obj);
 
-  res.render("myproject-detail", { data: obj[0] });
+  res.render("myproject-detail", { data: obj[0],user: req.session.user, isLogin: req.session.isLogin, user: req.session.user });
 }
 
 

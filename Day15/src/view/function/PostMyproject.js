@@ -11,6 +11,7 @@ async function PostMyproject(req, res) {
   const obj = await sequelize.query(query, { type: QueryTypes.INSERT });
 
   console.log('Data Insert Successfuly= ', obj)
+  req.flash('success', 'Success Insert Project!')
 
   res.redirect("/");
 }

@@ -1,11 +1,10 @@
 const { QueryTypes } = require("sequelize");
 const { sequelize } = require("../../models");
-const data = require("./data");
+
 async function home(req, res) {
   const query = "SELECT * FROM projects";
   const obj = await sequelize.query(query, { type: QueryTypes.SELECT });
   console.log("databaseProjects= ", obj);
-
   for (let index = 0; index < obj.length; index++) {
     const start_date = obj[index].start_date;
     const end_date = obj[index].end_date_string;
@@ -24,9 +23,9 @@ async function home(req, res) {
       msg = yearsDifference + " Years";
     }
     obj[index].msg = msg;
-  }
-  
-  res.render("index", { data: obj });
+  } 
+
+  res.render("index", { data: obj, user: req.session.user, isLogin: req.session.isLogin, user: req.session.user });
 }
 
 module.exports = home;
