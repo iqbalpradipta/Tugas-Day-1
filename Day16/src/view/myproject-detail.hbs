@@ -35,7 +35,7 @@
           <ul class='navbar-nav'>
             {{#if isLogin}}
               <li class='nav-item'>
-                <a class='nav-link me-sm-5 mb-sm-0 fw-bold'>Welcome, {{user.users}}</a>
+                <a class='nav-link me-sm-5 mb-sm-0 fw-bold'>Welcome, {{user.name}}</a>
               </li>
               <li class='nav-item'>
                 <a class='nav-link me-sm-4 mb-sm-0 fw-bold' href='/logout'>Logout</a>
@@ -62,7 +62,7 @@
       <h1 class='display-6 text-sm-center fw-bold'>{{data.name}}</h1>
       <div class='row pt-sm-4'>
         <div class='col'>
-          <img class='w-100 img-fluid' src='{{data.image}}' alt='gambarProject' />
+          <img class='w-100 img-fluid' src='/uploads/{{data.image}}' alt='gambarProject' />
         </div>
         <div class='col ms-sm-4 mt-sm-1'>
           <p class='fw-bold h6 ps-sm-2'>Duration</p>

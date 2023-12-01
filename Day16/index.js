@@ -51,7 +51,7 @@ app.get('/myproject', GetMyproject);
 app.post('/myproject', upload.single("image") ,PostMyproject);
 
 app.get('/updateproject/:id', updateprojects);
-app.post('/updateproject', updateproject);
+app.post('/updateproject', upload.single("image") ,updateproject);
 app.get('/myproject-detail/:id', myprojectDetail);
 app.get('/testimonial', testimonial);
 

@@ -8,7 +8,7 @@ async function myprojectDetail(req, res) {
 
   const query = `SELECT projects.id, projects.name, projects.start_date, projects.end_date_string, projects.description ,projects.technologies, projects.image, 
   users.name AS users, projects."createdAt", projects."updatedAt" FROM projects LEFT JOIN users ON
-  projects."userId" = users.id WHERE projects.id=${id}`;
+  projects."userId" = users.id WHERE projects.id=${id} `;
   const obj = await sequelize.query(query, { type: QueryTypes.SELECT });
 
   let formatDateAwal
@@ -54,7 +54,7 @@ async function myprojectDetail(req, res) {
   
   console.log("projectDetail", obj);
 
-  res.render("myproject-detail", { data: obj[0],user: req.session.user, isLogin: req.session.isLogin, user: req.session.user });
+  res.render("myproject-detail", { data: obj[0] });
 }
 
 

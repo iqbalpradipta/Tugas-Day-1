@@ -35,7 +35,7 @@
           <ul class='navbar-nav'>
             {{#if isLogin}}
               <li class='nav-item'>
-                <a class='nav-link me-sm-5 mb-sm-0 fw-bold'>Welcome, {{user.users}}</a>
+                <a class='nav-link me-sm-5 mb-sm-0 fw-bold'>Welcome, {{user.name}}</a>
               </li>
               <li class='nav-item'>
                 <a class='nav-link me-sm-4 mb-sm-0 fw-bold' href='/logout'>Logout</a>
@@ -59,8 +59,8 @@
 
     <!-- Form -->
     <h1 class='text-center fw-bold h3 pt-sm-4'>Edit My Project</h1>
-    <form class='container-sm pt-sm-4 p-sm-5 w-50' method='post' action='/updateproject'>
-      {{!-- <input type="hidden" name="id" value="{{data.id}}" readonly /> --}}
+    <form class='container-sm pt-sm-4 p-sm-5 w-50' method='post' action='/updateproject' enctype="multipart/form-data">
+      <input type="hidden" name="id" value="{{data.id}}" readonly />
       <div class='mb-sm-3'>
         <label for='inputNameProj' class='form-label fw-bold'>Project Name</label>
         <input type='text' class='form-control form-control-lg' id='inputNameProj' name='name' value='{{data.name}}' />
@@ -68,11 +68,11 @@
       <div class='row'>
         <div class='mb-sm-3 col-sm-6'>
           <label for='inputstartdate' class='form-label fw-bold'>Start Date</label>
-          <input type='date' class='form-control' id='inputstartdate' name='start_date' value='{{data.start_date}}' />
+          <input type='date' class='form-control' id='inputstartdate' name='start_date' value='{{data.updateStartDate}}' />
         </div>
         <div class='mb-sm-3 col-sm-6'>
           <label for='inputenddate' class='form-label fw-bold'>End Date</label>
-          <input type='date' class='form-control' id='inputenddate' name='end_date_string' value='{{data.end_date_string}}' />
+          <input type='date' class='form-control' id='inputenddate' name='end_date_string' value='{{data.updateEndDate}}' />
         </div>
       </div>
       <div class='mb-sm-3'>
@@ -103,7 +103,7 @@
       <div class='col-sm mb-3'>
         <label class='form-label fw-bold' for='inputImage'>Upload Image</label>
         <div class='input-group' for='inputImage'>
-          <input type='file' class='form-control' id='inputImage' />
+          <input type='file' class='form-control' id='inputImage' name="image" value='{{data.image}}'/>
           <div class='input-group-text'><img src='/assets/icon/file.png' alt='file' /></div>
         </div>
       </div>
