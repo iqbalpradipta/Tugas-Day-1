@@ -115,7 +115,7 @@
       <h3 class='text-sm-center'>My Project</h3>
       <div id='contents' class='row row-cols-1 row-cols-md-3'>
         {{#each data}}
-          <div class='col'>
+          <div class='col gy-sm-4'>
             <div class='card'>
               <img src='/uploads/{{this.image}}' class='card-img-top' />
               <div class='card-body'>
@@ -140,11 +140,6 @@
                 </div>
                 <a href='/updateproject/{{this.id}}' class='btn btn-dark w-25 rounded-5'>Edit</a>
                 <a href='/deleteList/{{this.id}}' class='btn btn-dark w-25 rounded-5 ms-sm-3'>Delete</a>
-                {{!-- <form method='post' action='/deleteList/{{this.id}}'>
-                </form> --}}
-
-                {{! Jangan lupa coba deh tidak menggunakan form tapi sama seperti update }}
-
               </div>
             </div>
           </div>

@@ -2,7 +2,9 @@ const { QueryTypes } = require("sequelize");
 const { sequelize } = require("../../models");
 
 async function home(req, res) {
-  const query = "SELECT * FROM projects";
+  const query = `SELECT projects.id, projects.name, projects.start_date, projects.end_date_string, projects.description ,projects.technologies, projects.image, 
+  users.name AS users, projects."createdAt", projects."updatedAt" FROM projects LEFT JOIN users ON
+  projects."userId" = users.id`;
   const obj = await sequelize.query(query, { type: QueryTypes.SELECT });
   console.log("databaseProjects= ", obj);
   for (let index = 0; index < obj.length; index++) {
