@@ -25,9 +25,15 @@
             <li class='nav-item'>
               <a class='nav-link ms-sm-2' aria-current='page' href='/'>Home</a>
             </li>
-            <li class='nav-item'>
-              <a class='nav-link ms-sm-3 active fw-bold' href='/myproject'>Add Project</a>
-            </li>
+            {{#if isLogin}}
+              <li class='nav-item'>
+                <a class='nav-link ms-sm-3 active fw-bold' href='/myproject'>Add Project</a>
+              </li>
+            {{else}}
+              <li class='nav-item'>
+                <a class='nav-link ms-sm-3 disabled' aria-disabled='true' href='/myproject'>Add Project</a>
+              </li>
+            {{/if}}
             <li class='nav-item'>
               <a class='nav-link ms-sm-3' href='/testimonial'>Testimonial</a>
             </li>
@@ -68,21 +74,21 @@
     <form class='container-sm pt-sm-4 p-sm-5 w-50' method='post' action='/myproject' enctype='multipart/form-data'>
       <div class='mb-sm-3'>
         <label for='inputNameProj' class='form-label fw-bold'>Project Name</label>
-        <input type='text' class='form-control form-control-lg' id='inputNameProj' name='name' />
+        <input type='text' class='form-control form-control-lg' id='inputNameProj' name='name' required />
       </div>
       <div class='row'>
         <div class='mb-sm-3 col-sm-6'>
           <label for='inputstartdate' class='form-label fw-bold'>Start Date</label>
-          <input type='date' class='form-control' id='inputstartdate' name='start_date' />
+          <input type='date' class='form-control' id='inputstartdate' name='start_date' required />
         </div>
         <div class='mb-sm-3 col-sm-6'>
           <label for='inputenddate' class='form-label fw-bold'>End Date</label>
-          <input type='date' class='form-control' id='inputenddate' name='end_date_string' />
+          <input type='date' class='form-control' id='inputenddate' name='end_date_string' required />
         </div>
       </div>
       <div class='mb-sm-3'>
         <label for='inputdescription' class='form-label fw-bold'>Description</label>
-        <textarea class='form-control' id='inputdescription' rows='3' name='description'></textarea>
+        <textarea class='form-control' id='inputdescription' rows='3' name='description' required></textarea>
       </div>
       <p class='fw-bold'>Technologies</p>
       <div class='row ps-sm-3'>
@@ -108,7 +114,7 @@
       <div class='col-sm mb-3'>
         <label class='form-label fw-bold' for='inputImage'>Upload Image</label>
         <div class='input-group' for='inputImage'>
-          <input type='file' class='form-control' id='inputImage' name='image' />
+          <input type='file' class='form-control' id='inputImage' name='image' required />
           <div class='input-group-text'><img src='/assets/icon/file.png' alt='file' /></div>
         </div>
       </div>

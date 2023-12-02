@@ -26,9 +26,15 @@
             <li class='nav-item'>
               <a class='nav-link ms-sm-2' aria-current='page' href='/'>Home</a>
             </li>
-            <li class='nav-item'>
-              <a class='nav-link ms-sm-3' href='/myproject'>Add Project</a>
-            </li>
+            {{#if isLogin}}
+              <li class='nav-item'>
+                <a class='nav-link ms-sm-3' href='/myproject'>Add Project</a>
+              </li>
+            {{else}}
+              <li class='nav-item'>
+                <a class='nav-link ms-sm-3 disabled' aria-disabled='true' href='/myproject'>Add Project</a>
+              </li>
+            {{/if}}
             <li class='nav-item'>
               <a class='nav-link ms-sm-3' href='/testimonial'>Testimonial</a>
             </li>
@@ -62,12 +68,12 @@
       <div class='alert alert-danger' role='alert'>
         {{messages.danger}}
       </div>
-    {{else if messages.success }}
+    {{else if messages.success}}
       <div class='alert alert-success' role='alert'>
         {{messages.success}}
       </div>
     {{/if}}
-    
+
     <!-- Login -->
     <div class='container pt-sm-4 p-sm-5 w-50'>
       <p class='text-center h4 fw-bold mt-sm-5'>LOGIN TO YOUR ACCOUNT</p>

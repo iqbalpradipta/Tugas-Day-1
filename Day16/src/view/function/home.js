@@ -15,6 +15,8 @@ async function home(req, res) {
     const monthDifference = end_date.getMonth() - start_date.getMonth() + 12 * (end_date.getFullYear() - start_date.getFullYear());
     const yearsDifference = end_date.getFullYear() - start_date.getFullYear();
     
+    const isLogin = req.session.isLogin
+
     let msg = "";
     if (dayDifference >= 1 && dayDifference <= 31) {
       msg = dayDifference + " Day";
@@ -24,9 +26,10 @@ async function home(req, res) {
       msg = yearsDifference + " Years";
     }
     obj[index].msg = msg;
+    obj[index].isLogin = isLogin;
   } 
   console.log("databaseProjects= ", obj);
-
+  
   res.render("index", { data: obj, user: req.session.users, isLogin: req.session.isLogin });
 }
 

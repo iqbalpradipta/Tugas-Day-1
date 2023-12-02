@@ -25,9 +25,15 @@
             <li class='nav-item'>
               <a class='nav-link ms-sm-2' aria-current='page' href='/'>Home</a>
             </li>
-            <li class='nav-item'>
-              <a class='nav-link ms-sm-3 active fw-bold' href='/myproject'>Add Project</a>
-            </li>
+            {{#if isLogin}}
+              <li class='nav-item'>
+                <a class='nav-link ms-sm-3' href='/myproject'>Add Project</a>
+              </li>
+            {{else}}
+              <li class='nav-item'>
+                <a class='nav-link ms-sm-3 disabled' aria-disabled='true' href='/myproject'>Add Project</a>
+              </li>
+            {{/if}}
             <li class='nav-item'>
               <a class='nav-link ms-sm-3' href='/testimonial'>Testimonial</a>
             </li>
@@ -59,8 +65,8 @@
 
     <!-- Form -->
     <h1 class='text-center fw-bold h3 pt-sm-4'>Edit My Project</h1>
-    <form class='container-sm pt-sm-4 p-sm-5 w-50' method='post' action='/updateproject' enctype="multipart/form-data">
-      <input type="hidden" name="id" value="{{data.id}}" readonly />
+    <form class='container-sm pt-sm-4 p-sm-5 w-50' method='post' action='/updateproject' enctype='multipart/form-data'>
+      <input type='hidden' name='id' value='{{data.id}}' readonly />
       <div class='mb-sm-3'>
         <label for='inputNameProj' class='form-label fw-bold'>Project Name</label>
         <input type='text' class='form-control form-control-lg' id='inputNameProj' name='name' value='{{data.name}}' />
@@ -103,7 +109,7 @@
       <div class='col-sm mb-3'>
         <label class='form-label fw-bold' for='inputImage'>Upload Image</label>
         <div class='input-group' for='inputImage'>
-          <input type='file' class='form-control' id='inputImage' name="image" value='{{data.image}}'/>
+          <input type='file' class='form-control' id='inputImage' name='image' value='{{data.image}}' required />
           <div class='input-group-text'><img src='/assets/icon/file.png' alt='file' /></div>
         </div>
       </div>

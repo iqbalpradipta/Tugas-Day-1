@@ -32,9 +32,15 @@
             <li class='nav-item'>
               <a class='nav-link ms-sm-2 active fw-bold' aria-current='page' href='/'>Home</a>
             </li>
-            <li class='nav-item'>
-              <a class='nav-link ms-sm-3' href='/myproject'>Add Project</a>
-            </li>
+            {{#if isLogin}}
+              <li class='nav-item'>
+                <a class='nav-link ms-sm-3' href='/myproject'>Add Project</a>
+              </li>
+            {{else}}
+              <li class='nav-item'>
+                <a class='nav-link ms-sm-3 disabled' aria-disabled='true' href='/myproject'>Add Project</a>
+              </li>
+            {{/if}}
             <li class='nav-item'>
               <a class='nav-link ms-sm-3' href='/testimonial'>Testimonial</a>
             </li>
@@ -86,7 +92,7 @@
               <button type='button' class='btn btn-dark rounded-5'><a href='/contact' style='text-decoration: none; color: #ffff;'>Contact</a></button>
             </div>
             <div class='col pt-sm-2'>
-              <a data-bs-toggle='modal' data-bs-target='#modalPdf'>Download CV <img src='/assets/icon/file.png' class='pb-sm-1' alt='download' style='width: 18px' /></a>
+              <a href='' data-bs-toggle='modal' data-bs-target='#modalPdf' style="text-decoration: none; color:#000000 ">Download CV <img src='/assets/icon/file.png' class='pb-sm-1' alt='download' style='width: 18px' /></a>
             </div>
           </div>
           <!-- icon -->
@@ -122,7 +128,7 @@
       <div class='modal-dialog'>
         <div class='modal-content'>
           <div class='modal-header'>
-            <h5 class='modal-title' id='modalPdf'>Curriculum Vintae</h5>
+            <h5 class='modal-title' id='modalPdf'>Curriculum Vitae</h5>
             <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
           </div>
           <div class='modal-body'>
@@ -130,7 +136,7 @@
           </div>
           <div class='modal-footer'>
             <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
-            <a href='https://drive.google.com/uc?export=download&id=1TV2raofNmnNuRMbLF5wQ4IeR2IZCS8rj' class='btn btn-dark' download><i class="fa fa-download"></i> &nbsp; Download</a>
+            <a href='https://drive.google.com/uc?export=download&id=1TV2raofNmnNuRMbLF5wQ4IeR2IZCS8rj' class='btn btn-dark' download><i class='fa fa-download'></i> &nbsp; Download</a>
           </div>
         </div>
       </div>
@@ -164,8 +170,10 @@
                     {{/if}}
                   {{/each}}
                 </div>
-                <a href='/updateproject/{{this.id}}' class='btn btn-dark w-25 rounded-5'>Edit</a>
-                <a class='btn btn-dark w-25 rounded-5 ms-sm-3' data-bs-toggle='modal' data-bs-target='#modalVerif'>Delete</a>
+                {{#if this.isLogin}}
+                  <a href='/updateproject/{{this.id}}' class='btn btn-dark w-25 rounded-5'>Edit</a>
+                  <a class='btn btn-dark w-25 rounded-5 ms-sm-3' data-bs-toggle='modal' data-bs-target='#modalVerif'>Delete</a>
+                {{/if}}
               </div>
             </div>
           </div>

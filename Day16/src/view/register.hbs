@@ -26,9 +26,15 @@
             <li class='nav-item'>
               <a class='nav-link ms-sm-2' aria-current='page' href='/'>Home</a>
             </li>
-            <li class='nav-item'>
-              <a class='nav-link ms-sm-3' href='/myproject'>Add Project</a>
-            </li>
+            {{#if isLogin}}
+              <li class='nav-item'>
+                <a class='nav-link ms-sm-3' href='/myproject'>Add Project</a>
+              </li>
+            {{else}}
+              <li class='nav-item'>
+                <a class='nav-link ms-sm-3 disabled' aria-disabled='true' href='/myproject'>Add Project</a>
+              </li>
+            {{/if}}
             <li class='nav-item'>
               <a class='nav-link ms-sm-3' href='/testimonial'>Testimonial</a>
             </li>
@@ -71,18 +77,18 @@
       <form action='/register' method='post'>
         <div class='mt-3'>
           <label for='name' class='form-label'>Name</label>
-          <input type='text' class='form-control' id='name' name='name' />
+          <input type='text' class='form-control' id='name' name='name' required />
         </div>
         <div class='mt-3'>
           <label for='email' class='form-label'>Email</label>
-          <input type='email' class='form-control' id='email' name='email' />
+          <input type='email' class='form-control' id='email' name='email' required />
         </div>
         <div class='mt-3'>
           <label for='password' class='form-label'>Password</label>
-          <input type='password' class='form-control' id='password' name='password' />
+          <input type='password' class='form-control' id='password' name='password' required />
         </div>
         <div>
-          <a class='btn btn-dark rounded-5 mt-sm-3 float-end w-25' data-bs-toggle="modal" data-bs-target="#modalVerif">Register</a>
+          <a class='btn btn-dark rounded-5 mt-sm-3 float-end w-25' data-bs-toggle='modal' data-bs-target='#modalVerif'>Register</a>
         </div>
         <!-- Modal -->
         <div class='modal fade' id='modalVerif' tabindex='-1' aria-labelledby='modalVerif ' aria-hidden='true'>
