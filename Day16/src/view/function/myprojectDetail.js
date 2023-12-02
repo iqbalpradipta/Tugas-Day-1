@@ -42,7 +42,7 @@ async function myprojectDetail(req, res) {
     const yearsDifference = end_date.getFullYear() - start_date.getFullYear();
 
     let msg = "";
-    if (dayDifference >= 1 && dayDifference <= 31) {
+    if (dayDifference >= 1 && dayDifference <= 30) {
       msg = dayDifference + " Day";
     } else if (monthDifference >= 1 && monthDifference <= 12) {
       msg = monthDifference + " Month";
@@ -54,7 +54,7 @@ async function myprojectDetail(req, res) {
   
   console.log("projectDetail", obj);
 
-  res.render("myproject-detail", { data: obj[0] });
+  res.render("myproject-detail", { data: obj[0], user: req.session.users, isLogin: req.session.isLogin });
 }
 
 

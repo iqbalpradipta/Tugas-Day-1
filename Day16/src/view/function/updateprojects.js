@@ -10,7 +10,7 @@ async function updateprojects(req, res) {
 
   console.log('update blog view', obj);
 
-  res.render('updateproject', { data: obj[0], user: req.session.user, isLogin: req.session.isLogin, user: req.session.user });
+  res.render('updateproject', { data: obj[0], user: req.session.users, isLogin: req.session.isLogin, user: req.session.user });
 }
 
 module.exports = updateprojects;

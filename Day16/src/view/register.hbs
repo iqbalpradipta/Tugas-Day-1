@@ -24,7 +24,7 @@
         <div class='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
             <li class='nav-item'>
-              <a class='nav-link ms-sm-2 active fw-bold' aria-current='page' href='/'>Home</a>
+              <a class='nav-link ms-sm-2' aria-current='page' href='/'>Home</a>
             </li>
             <li class='nav-item'>
               <a class='nav-link ms-sm-3' href='/myproject'>Add Project</a>
@@ -43,7 +43,7 @@
               </li>
             {{else}}
               <li class='nav-item'>
-                <a class='nav-link me-sm-4 mt-sm-2' href='/register'>Register</a>
+                <a class='nav-link me-sm-4 mt-sm-2 active fw-bold' href='/register'>Register</a>
               </li>
               <li class='nav-item'>
                 <a class='nav-link me-sm-5 mt-sm-2' href='/login'>Login</a>
@@ -82,7 +82,25 @@
           <input type='password' class='form-control' id='password' name='password' />
         </div>
         <div>
-          <button type='submit' class='btn btn-dark rounded-5 mt-sm-3 float-end w-25'>Register</button>
+          <a class='btn btn-dark rounded-5 mt-sm-3 float-end w-25' data-bs-toggle="modal" data-bs-target="#modalVerif">Register</a>
+        </div>
+        <!-- Modal -->
+        <div class='modal fade' id='modalVerif' tabindex='-1' aria-labelledby='modalVerif ' aria-hidden='true'>
+          <div class='modal-dialog'>
+            <div class='modal-content'>
+              <div class='modal-header'>
+                <h5 class='modal-title' id='modalVerif'>Registration Confrimation!</h5>
+                <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+              </div>
+              <div class='modal-body'>
+                <p>Make sure your data is true!</p>
+              </div>
+              <div class='modal-footer'>
+                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+                <button type='submit' class='btn btn-dark' data-bs-dismiss='modal'>Register</button>
+              </div>
+            </div>
+          </div>
         </div>
       </form>
     </div>
