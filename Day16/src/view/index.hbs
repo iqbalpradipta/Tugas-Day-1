@@ -92,7 +92,7 @@
               <button type='button' class='btn btn-dark rounded-5'><a href='/contact' style='text-decoration: none; color: #ffff;'>Contact</a></button>
             </div>
             <div class='col pt-sm-2'>
-              <a href='' data-bs-toggle='modal' data-bs-target='#modalPdf' style="text-decoration: none; color:#000000 ">Download CV <img src='/assets/icon/file.png' class='pb-sm-1' alt='download' style='width: 18px' /></a>
+              <a href='' data-bs-toggle='modal' data-bs-target='#modalPdf' style='text-decoration: none; color:#000000 '>Download CV <img src='/assets/icon/file.png' class='pb-sm-1' alt='download' style='width: 18px' /></a>
             </div>
           </div>
           <!-- icon -->
@@ -151,9 +151,12 @@
             <div class='card'>
               <img src='/uploads/{{this.image}}' class='card-img-top' />
               <div class='card-body'>
-                <h5 class='card-title fw-bold fs-4'><a href='/myproject-detail/{{this.id}}' style='text-decoration: none; color: black;'>{{this.name}}</a></h5>
-                <p class='text-sm-start' style='font-size: 14px'>Durasi: {{this.msg}} </p>
-                <p class='card-text mb-sm-4'> {{this.description}} </p>
+                <h5 class='card-title fw-bold fs-3'><a href='/myproject-detail/{{this.id}}' style='text-decoration: none; color: black;'>{{this.name}}</a></h5>
+                <p class='text-sm-start' style='font-size: 14px'>Author: {{this.users}} </p>
+                <p class='text-sm-start' style='font-size: 14px; position: relative; bottom: 18px;'>Durasi: {{this.msg}} </p>
+                <p class='card-text mb-sm-4 text-truncate'> 
+                  {{this.description}} 
+                </p>
                 <div class='row mb-sm-4'>
                   {{#each this.technologies}}
                     {{#if (this.includes 'nodeJS')}}
@@ -172,13 +175,15 @@
                 </div>
                 {{#if this.isLogin}}
                   <a href='/updateproject/{{this.id}}' class='btn btn-dark w-25 rounded-5'>Edit</a>
-                  <a class='btn btn-dark w-25 rounded-5 ms-sm-3' data-bs-toggle='modal' data-bs-target='#modalVerif'>Delete</a>
+                  <a class='btn btn-dark w-25 rounded-5 ms-sm-3' data-bs-toggle='modal' data-bs-target='#modalVerif{{@index}}'>Delete</a>
                 {{/if}}
               </div>
             </div>
           </div>
-          <!-- Modal delete -->
-          <div class='modal fade' id='modalVerif' tabindex='-1' aria-labelledby='modalVerif ' aria-hidden='true'>
+        {{/each}}
+        <!-- Modal delete -->
+        {{#each data}}
+          <div class='modal fade' id='modalVerif{{@index}}' tabindex='-1' aria-labelledby='modalVerif{{@index}}' aria-hidden='true'>
             <div class='modal-dialog'>
               <div class='modal-content'>
                 <div class='modal-header'>
@@ -195,8 +200,8 @@
               </div>
             </div>
           </div>
-          {{! modal delete end }}
         {{/each}}
+        {{! modal delete end }}
       </div>
     </div>
     <!-- End List of Content -->

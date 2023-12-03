@@ -84,40 +84,48 @@
               <p class='h6 my-sm-2'>{{data.msg}}</p>
             </div>
           </div>
-          <p class='fw-bold h6 ps-sm-2 mt-sm-5'>Technologies</p>
-          <div class='row col-sm-7 px-sm-0'>
-            <img class='img-fluid w-25 pt-sm-0 px-sm-4' src='/assets/icon/atom.png' />
-            <div class='col-sm-9 px-sm-0'>
-              <p class='h6 my-sm-2'>React JS</p>
-            </div>
+          <p class='fw-bold h6 ps-sm-2 mt-sm-4'>Technologies</p>
+          <div class='row'>
+            {{#each data.technologies}}
+              {{#if (this.includes 'nodeJS')}}
+                <div class='col-sm-6'>
+                  <p class='ms-sm-1 gx-2'>
+                    <img src='/assets/icon/node-js.png' style='width:30px;height:30px;' />
+                    &nbsp;Node JS
+                  </p>
+                </div>
+              {{/if}}
+              {{#if (this.includes 'reactJS')}}
+                <div class='col-sm-6'>
+                  <p class='ms-sm-1 gx-2'>
+                    <img src='/assets/icon/atom.png' style='width:30px;height:30px;' />
+                    &nbsp;React JS
+                  </p>
+                </div>
+              {{/if}}
+              {{#if (this.includes 'nextJS')}}
+                <div class='col-sm-6'>
+                  <p class='ms-sm-1 gx-2'>
+                    <img src='/assets/icon/next.png' style='width:30px;height:30px;' />
+                    &nbsp;Next JS
+                  </p>
+                </div>
+              {{/if}}
+              {{#if (this.includes 'typescript')}}
+                <div class='col-sm-6'>
+                  <p class='ms-sm-1 gx-2'>
+                    <img src='/assets/icon/typescript.png' style='width:30px;height:30px;' />
+                    &nbsp;Typescript
+                  </p>
+                </div>
+              {{/if}}
+            {{/each}}
           </div>
-          <div class='row col-sm-7 px-sm-0 mt-sm-3'>
-            <img class='img-fluid w-25 pt-sm-0 px-sm-4' src='/assets/icon/node-js.png' />
-            <div class='col-sm-9 px-sm-0'>
-              <p class='h6 my-sm-2'>Node JS</p>
-            </div>
-          </div>
-          <div class='row col-sm-7 px-sm-0 mt-sm-3' style='position: relative; bottom: 100.9px; left: 200px'>
-            <img class='img-fluid w-25 pt-sm-0 px-sm-4' src='/assets/icon/icons8-javascript-50.png' />
-            <div class='col-sm-9 px-sm-0'>
-              <p class='h6 my-sm-2'>Javascript</p>
-            </div>
-          </div>
-          <div class='row col-sm-7 px-sm-0 mt-sm-3' style='position: relative; bottom: 100.9px; left: 200px'>
-            <img class='img-fluid w-25 pt-sm-0 px-sm-4' src='/assets/icon/socket_io_logo_icon_144874.png' />
-            <div class='col-sm-9 px-sm-0'>
-              <p class='h6 my-sm-2'>Socket IO</p>
-            </div>
-          </div>
+          <p class='fw-bold h6 mt-sm-2 ms-sm-2'>Author</p>
+          <p class='h6 mt-sm-2 ms-sm-2'>{{data.users}}</p>
         </div>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum mollitia iusto vel debitis beatae quaerat laboriosam, similique sequi quia culpa quisquam optio doloremque, non sed consequatur magnam iure unde! Deserunt obcaecati
-          suscipit, a veritatis eius, quo laborum porro molestiae quibusdam aut laudantium minima rem minus laboriosam dolorem eum ad voluptatem exercitationem? Optio reprehenderit sint deserunt facere reiciendis quaerat laboriosam in nisi
-          vero molestias iure ipsum, quo ex ratione et quibusdam, soluta sunt asperiores? Ab ut odit cum consequuntur, recusandae natus repudiandae nulla non veniam saepe veritatis deleniti corrupti, blanditiis molestias odio dolorem
-          obcaecati eum voluptatum quibusdam ipsam, labore quo quia minus! Voluptate totam tempore consequatur voluptatum laborum nemo labore molestiae cupiditate aliquam? Nesciunt, voluptate labore facere eligendi error velit quod ea modi
-          at ipsam reprehenderit. Pariatur laborum repudiandae laboriosam cumque ipsam molestias reiciendis repellendus ipsa eligendi eveniet ab odit, officia quis sequi ex id qui velit! Illo dolore autem, reprehenderit qui dolorem minus
-          repudiandae quibusdam labore et fugit modi provident at explicabo culpa facilis quidem corporis aut ratione soluta odio sunt harum similique iure sit! Maiores incidunt saepe, ipsum distinctio tenetur eligendi explicabo, vitae sunt
-          error nobis, eaque tempore aut minima illo nam sit. Fuga veritatis nesciunt id odio illum.
+          {{data.description}}
         </p>
       </div>
     </div>

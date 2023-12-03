@@ -14,7 +14,7 @@ async function home(req, res) {
     const dayDifference = timeDifference / (1000 * 60 * 60 * 24);
     const monthDifference = end_date.getMonth() - start_date.getMonth() + 12 * (end_date.getFullYear() - start_date.getFullYear());
     const yearsDifference = end_date.getFullYear() - start_date.getFullYear();
-    
+
     const isLogin = req.session.isLogin
 
     let msg = "";
@@ -25,8 +25,8 @@ async function home(req, res) {
     } else {
       msg = yearsDifference + " Years";
     }
-    obj[index].msg = msg;
     obj[index].isLogin = isLogin;
+    obj[index].msg = msg;
   } 
   console.log("databaseProjects= ", obj);
   

@@ -23,6 +23,8 @@ async function updateproject(req, res) {
   const obj = await sequelize.query(query, { type: QueryTypes.UPDATE })
 
   console.log('update Data success= ', obj)
+  req.flash('success', 'Update Data Project!');
+
 
   res.redirect('/');
 }

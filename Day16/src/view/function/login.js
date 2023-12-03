@@ -37,6 +37,8 @@ async function login(req, res) {
       email: obj[0].email,
     };
 
+    console.log('data login:', req.session.users)
+
     return res.redirect('/');
   });
 }
