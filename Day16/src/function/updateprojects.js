@@ -1,5 +1,5 @@
 const { QueryTypes } = require('sequelize');
-const { sequelize } = require('../../models');
+const { sequelize } = require('../models');
 const data = require('./data');
 
 async function updateprojects(req, res) {
@@ -22,7 +22,7 @@ async function updateprojects(req, res) {
     let tanggalAkhir = end_date.getDate();
     let tahunAkhir = end_date.getFullYear();
 
-    console.log('bulanakhir', bulanAkhir)
+    console.log('bulanakhir', bulanAkhir);
 
     if (bulanAwal < 10) {
       bulanAwal = '0' + bulanAwal;

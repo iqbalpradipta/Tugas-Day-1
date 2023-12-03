@@ -1,5 +1,5 @@
 const { QueryTypes } = require('sequelize');
-const { sequelize } = require('../../models');
+const { sequelize } = require('../models');
 
 async function PostMyproject(req, res) {
   const { name, start_date, end_date_string, description, technologies } = req.body;

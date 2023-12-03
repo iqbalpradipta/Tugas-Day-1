@@ -9,20 +9,20 @@ const sequelize = new Sequelize(config.development);
 const session = require('express-session');
 const flash = require('express-flash');
 
-const home = require('./src/view/function/home');
-const deleteList = require('./src/view/function/deleteList');
-const contact = require('./src/view/function/contact');
-const GetMyproject = require('./src/view/function/GetMyproject');
-const myprojectDetail = require('./src/view/function/myprojectDetail');
-const PostMyproject = require('./src/view/function/PostMyproject');
-const updateproject = require('./src/view/function/updateproject');
-const updateprojects = require('./src/view/function/updateprojects');
-const testimonial = require('./src/view/function/testimonial');
-const loginViews = require('./src/view/function/loginViews');
-const registerViews = require('./src/view/function/registerViews');
-const register = require('./src/view/function/register');
-const login = require('./src/view/function/login');
-const logout = require('./src/view/function/logout');
+const home = require('./src/function/home');
+const deleteList = require('./src/function/deleteList');
+const contact = require('./src/function/contact');
+const GetMyproject = require('./src/function/GetMyproject');
+const myprojectDetail = require('./src/function/myprojectDetail');
+const PostMyproject = require('./src/function/PostMyproject');
+const updateproject = require('./src/function/updateproject');
+const updateprojects = require('./src/function/updateprojects');
+const testimonial = require('./src/function/testimonial');
+const loginViews = require('./src/function/loginViews');
+const registerViews = require('./src/function/registerViews');
+const register = require('./src/function/register');
+const login = require('./src/function/login');
+const logout = require('./src/function/logout');
 const upload = require('./src/middlewares/uploadFile')
 
 app.set('view engine', 'hbs');
