@@ -3,7 +3,7 @@ const { sequelize } = require('../models');
 
 async function home(req, res) {
   const query = `SELECT projects.id, projects.name, projects.start_date, projects.end_date_string, projects.description ,projects.technologies, projects.image, 
-  users.name AS users, projects."createdAt", projects."updatedAt" FROM projects LEFT JOIN users ON
+  users.name AS users, users.id AS usersId, projects."createdAt", projects."updatedAt" FROM projects LEFT JOIN users ON
   projects."userId" = users.id`;
   const obj = await sequelize.query(query, { type: QueryTypes.SELECT });
   for (let index = 0; index < obj.length; index++) {
@@ -28,8 +28,8 @@ async function home(req, res) {
     obj[index].isLogin = isLogin;
     obj[index].msg = msg;
   }
-
   console.log('databaseProjects= ', obj);
+
   res.render('index', { data: obj, user: req.session.users, isLogin: req.session.isLogin });
 }
 

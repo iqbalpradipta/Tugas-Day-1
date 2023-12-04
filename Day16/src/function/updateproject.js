@@ -1,5 +1,6 @@
 const { QueryTypes } = require('sequelize');
 const { sequelize } = require('../models');
+const projects = require('../models/projects');
 const data = require('./data');
 
 async function updateproject(req, res) {
@@ -13,17 +14,20 @@ async function updateproject(req, res) {
 
   if (!image) {
     const query = `SELECT projects.id, projects.name, projects.start_date, projects.end_date_string, projects.description ,projects.technologies, projects.image, 
-    users.name AS users, projects."createdAt", projects."updatedAt" FROM projects LEFT JOIN users ON
+    users.name AS users, users.id AS usersId, projects."createdAt", projects."updatedAt" FROM projects LEFT JOIN users ON
     projects."userId" = users.id WHERE projects.id=${id}`;
     const obj = await sequelize.query(query, { type: QueryTypes.SELECT });
     image = obj[0].image;
   }
 
-  const query = `UPDATE projects SET name='${name}', start_date='${start_date}', end_date_string='${end_date_string}', description='${description}', image='${image}' WHERE id=${id}`;
+  const user = req.session.users;
+
+  const query = `UPDATE projects SET name='${name}', start_date='${start_date}', end_date_string='${end_date_string}', description='${description}', image='${image}' WHERE id=${id} AND "userId" = '${user.id}'`;
   const obj = await sequelize.query(query, { type: QueryTypes.UPDATE });
 
   console.log('update Data success= ', obj);
-  req.flash('success', 'Update Data Project!');
+  
+  // req.flash('success', 'Update Data Project!');
 
   res.redirect('/');
 }

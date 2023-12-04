@@ -6,7 +6,7 @@ async function updateprojects(req, res) {
   const { id } = req.params;
 
   const query = `SELECT projects.id, projects.name, projects.start_date, projects.end_date_string, projects.description ,projects.technologies, projects.image, 
-  users.name AS users, projects."createdAt", projects."updatedAt" FROM projects LEFT JOIN users ON
+  users.name AS users, users.id AS usersId, projects."createdAt", projects."updatedAt" FROM projects LEFT JOIN users ON
   projects."userId" = users.id WHERE projects.id=${id}`;
   const obj = await sequelize.query(query, { type: QueryTypes.SELECT });
 
@@ -22,8 +22,6 @@ async function updateprojects(req, res) {
     let tanggalAkhir = end_date.getDate();
     let tahunAkhir = end_date.getFullYear();
 
-    console.log('bulanakhir', bulanAkhir);
-
     if (bulanAwal < 10) {
       bulanAwal = '0' + bulanAwal;
     }
@@ -38,7 +36,6 @@ async function updateprojects(req, res) {
       tanggalAkhir = '0' + tanggalAkhir;
     }
 
-    console.log('bulanAwal', bulanAwal);
 
     let updateStartDate = `${tahunAwal}-${bulanAwal}-${tanggalAwal}`;
     let updateEndDate = `${tahunAkhir}-${bulanAkhir}-${tanggalAkhir}`;

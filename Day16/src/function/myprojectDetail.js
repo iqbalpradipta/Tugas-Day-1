@@ -7,7 +7,7 @@ async function myprojectDetail(req, res) {
   date = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
 
   const query = `SELECT projects.id, projects.name, projects.start_date, projects.end_date_string, projects.description ,projects.technologies, projects.image, 
-  users.name AS users, projects."createdAt", projects."updatedAt" FROM projects LEFT JOIN users ON
+  users.name AS users, users.id AS usersId, projects."createdAt", projects."updatedAt" FROM projects LEFT JOIN users ON
   projects."userId" = users.id WHERE projects.id=${id} `;
   const obj = await sequelize.query(query, { type: QueryTypes.SELECT });
 

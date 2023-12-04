@@ -70,7 +70,11 @@
     </nav>
     <!-- End Of Navbar -->
 
-    {{#if messages.success}}
+    {{#if messages.danger}}
+      <div class='alert alert-danger' role='alert'>
+        {{messages.danger}}
+      </div>
+    {{else if messages.success}}
       <div class='alert alert-success' role='alert'>
         {{messages.success}}
       </div>
@@ -154,8 +158,8 @@
                 <h5 class='card-title fw-bold fs-3'><a href='/myproject-detail/{{this.id}}' style='text-decoration: none; color: black;'>{{this.name}}</a></h5>
                 <p class='text-sm-start' style='font-size: 14px'>Author: {{this.users}} </p>
                 <p class='text-sm-start' style='font-size: 14px; position: relative; bottom: 18px;'>Durasi: {{this.msg}} </p>
-                <p class='card-text mb-sm-4 text-truncate'> 
-                  {{this.description}} 
+                <p class='card-text mb-sm-4 text-truncate'>
+                  {{this.description}}
                 </p>
                 <div class='row mb-sm-4'>
                   {{#each this.technologies}}
